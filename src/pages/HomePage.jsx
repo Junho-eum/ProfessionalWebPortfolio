@@ -6,6 +6,7 @@ import TextReveal from "../components/TextReveal"; // Import the new component
 import "../components/styles/Typewriter.css"; // include this if your css is in Typewriter.css
 import Cards from "../components/Cards";
 import "../components/styles/Cards.css";
+import TextRevealProfile from "../components/TextRevealProfile";
 
 function Page1() {
   useEffect(() => {
@@ -154,18 +155,7 @@ function Page1() {
         <h1 className="page1-maintext"></h1>
         <TextReveal /> {/* Use the new component */}
         <div className="container-lg">
-          <p className="page1-typewriter-line-1 anim-typewriter-1">
-            Hi I'm Junho
-          </p>
-          <p className="page1-typewriter-line-2 anim-typewriter-2">
-            I specialize in integrating analytics into software solutions.
-          </p>
-          <p className="page1-typewriter-line-3 anim-typewriter-3">
-            With a passion for insightful analysis and exploring algorithms,
-          </p>
-          <p className="page1-typewriter-line-4 anim-typewriter-4">
-            I strive to turn complex data into meaningful solutions.
-          </p>
+        <TextRevealProfile /> 
         </div>
       </div>
     </>
