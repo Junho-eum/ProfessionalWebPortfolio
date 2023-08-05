@@ -187,7 +187,7 @@ function PageFour() {
                             <strong>6. Tactical Baserunning:</strong> Reflects a team's tactical approach to advancing runners and gaining bases, with less focus on walks or getting hit by pitches.
                             </p>
                         <br></br>
-                    <div className="content-container-4">
+                        <div className="content-container-4">
                     <CardSliderPageFour/>
                     </div>
         
@@ -197,18 +197,18 @@ function PageFour() {
 
                 </section>
                 </div>
-                
-                    <section className="et-slide-4 section4" id="tab-interaction">
-                        <div className="header-container">
+                <div className='content-container-4'>
+                <section className="et-slide-4" id="tab-interaction">
+                        <div className="header-container-5">
                             <h1 className='intro1'>Optimization and Interaction Analysis of Batting and Pitching Variables Using XGBoost Models</h1>
                             <p>To better understand and capture the complex interactions between variables, I developed two XGBoost models for batter and pitcher data. The target variables were total runs scored and total runs allowed, respectively. By using Grid Search, I fine-tuned the models and achieved accuracy scores of 0.9837 and 0.9796 for the batter and pitcher data, respectively. The pitcher's data analysis revealed key insights into different pitching scenarios and strategies' impacts on game results, emphasizing the importance of a pitcher's control. These insights are visually depicted in the SHAP interaction plots.</p>
+                            <div className="content-container-5">
+                                <CardSliderPageFourTwo/>
+                            </div>
                         </div>
-                    <div className="content-container-5">
-                    <CardSliderPageFourTwo/>
-                    </div>
+
                 </section>
-
-
+                </div>
 
             </main>
         </div>
