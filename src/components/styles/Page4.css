@@ -17,6 +17,7 @@ a {
 }
 
 .baseball-title {
+    
     background-size: cover;
     color: white
 }
@@ -68,14 +69,13 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100vh;
+    height: 10vh;
     position: relative;
     background: white;
-    text-align: center;
-    padding: 0 2em;
-    margin-top: 100vh;
-    margin-bottom: 10rem;
-
+    text-align: left;
+    padding: 0 ;
+    margin-top: -100vh;
+    margin-bottom: 10vh;
 }
 
 .et-slide {
@@ -192,21 +192,22 @@ a {
     height: auto; /* Allow the container to adjust its height according to its content */
     overflow: visible; /* Enable full component display */
     flex-direction: column;
-    margin-top: 10vh;
+    margin-top: 5vh;
+    margin-bottom: 10vh;
+    
     
 }
 
 .content-container-5 {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding-top:2em; /* Space below header container */
+    
+    padding-top:1em; /* Space below header container */
     width: 100%;
     height: auto; /* Allow the container to adjust its height according to its content */
     overflow: visible; /* Enable full component display */
     flex-direction: column;
-    margin-top: 60vh;
-    
+
 }
 
 .et-hero-tab {
