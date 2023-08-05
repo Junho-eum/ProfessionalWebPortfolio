@@ -4,7 +4,6 @@ import Page2 from "../pages/PageTwo.jsx";
 
 import { Link } from "react-router-dom";
 const cardsData = [
-[
   {
     to: "/Page2",
     imgSrc: "assets/KBOvsMLB.png",
@@ -25,6 +24,7 @@ const cardsData = [
     tags: ["HTML"],
   },
 ];
+
 
 
 
