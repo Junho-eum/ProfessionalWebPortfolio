@@ -193,7 +193,7 @@ a {
     overflow: visible; /* Enable full component display */
     flex-direction: column;
     margin-top: 5vh;
-    margin-bottom: 10vh;
+    margin-bottom: 150vh;
     
     
 }
@@ -209,7 +209,9 @@ a {
     flex-direction: column;
 
 }
-
+.content-container-10 {
+    margin-top: 5vh;
+}
 .et-hero-tab {
     display: flex;
     justify-content: center;
