@@ -192,7 +192,7 @@ a {
     height: auto; /* Allow the container to adjust its height according to its content */
     overflow: visible; /* Enable full component display */
     flex-direction: column;
-    margin-top: 200vh;
+    margin-top: 10vh;
     
 }
 
