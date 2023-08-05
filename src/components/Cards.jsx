@@ -4,26 +4,29 @@ import Page2 from "../pages/PageTwo.jsx";
 
 import { Link } from "react-router-dom";
 const cardsData = [
+[
   {
     to: "/Page2",
-    imgSrc: "public/KBOvsMLB.png",  // removed "src/"
+    imgSrc: "assets/KBOvsMLB.png",
     title: "Baseball Across Cultures",
     date: "6 Oct 2017",
     tags: ["HTML"],
   },
   {
     href: "https://github.com/jpa203/Junho_JP_Heap_Project/blob/main/README.md",
-    imgSrc: "public/heap.png",  // removed "src/"
+    imgSrc: "assets/heap.png",
     title: "Heap Doc Clustering Algorithm",
     tags: ["HTML"],
   },
   {
     href: "https://junho-eum.github.io/dental_map.html",
-    imgSrc: "public/dentalClinic.png",  // removed "src/"
+    imgSrc: "assets/dentalClinic.png",
     title: "Clinic Location Finder",
     tags: ["HTML"],
   },
 ];
+
+
 
 
 
