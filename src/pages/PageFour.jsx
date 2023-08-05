@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import '../components/styles/Page4.css';
-
+import KBOvsMLB from '../assets/KBOvsMLB.png';
 import "../components/styles/Page2.css";
 import HtmlComp from "../components/3DHTML.jsx";
 import CardSliderPageFour from '../components/CardSliderPageFour';
@@ -82,7 +82,10 @@ function PageFour() {
 
     return (
         <div>
-            <section className="et-hero-tabs baseball-title">
+            <section
+                className="et-hero-tabs baseball-title"
+                style={{ backgroundImage: `url(${KBOvsMLB})` }}
+            >
                 <h1 className='title'>{title}</h1>
                 <h2 className='subtitle'>{subtitle}</h2>
                 <div className="et-hero-tabs-container" ref={tabContainerRef}>
