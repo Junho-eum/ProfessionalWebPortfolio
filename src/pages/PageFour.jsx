@@ -98,6 +98,7 @@ function PageFour() {
                 </div>
             </section>
             <main className="et-main">
+            
                 <section className="et-slide section1" id="tab-intro">
                 <div className="header-container">
                     <h1 className='intro1'>INTRO</h1>
@@ -109,10 +110,11 @@ function PageFour() {
             of team performance beyond the Pythagorean Expectation.</h3>
             <br></br>
             <h3 className='intro2'>The Pythagorean Expectation theory may not fully capture the complexities and variabilities in sports like baseball. A 3D plot of KBO data indicates the presence of outliers that the theory doesn't readily explain. These outliers could be attributed to exceptional performances, strong pitching, or random fluctuations. This paper will investigate these contributing factors and attempt to provide a better understanding of these deviations. By analyzing features that has strong influence on wins in KBO I aim to identify distinctive characteristics that may influence these outliers. </h3>
-            </div>
-                    <div className="content-container">
+                <div className="content-container">
                     <HtmlComp />
-                    </div>
+                </div>
+            </div>
+                    
                 </section>
                 
                 {/* <p id="tab-flexbox"></p> */}
@@ -195,11 +197,6 @@ function PageFour() {
                     </div>
                 </section>
                 </div>
-            
-                    <div className="content-container-4">
-                    <CardSliderPageFour/>
-                    </div>
-                </section>
                 
                     <section className="et-slide-4 section4" id="tab-interaction">
                         <div className="header-container">
