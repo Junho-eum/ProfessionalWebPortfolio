@@ -2,7 +2,7 @@
 .textReveal-reveal::after {
   animation-delay: 0;
   /*Use this to add title text delay effect*/
-  animation-delay: var(--animation-delay, 11s);
+  animation-delay: var(--animation-delay, 2s);
   animation-iteration-count: 1;
   animation-iteration-count: var(--iterations, 1);
   animation-duration: 800ms;
@@ -13,7 +13,7 @@
 
 .textReveal-reveal {
   position: absolute; /* Make it absolute */
-  top: 40%; /* Center vertically */
+  top: 15%; /* Center vertically */
   left: 50%; /* Center horizontally */
   transform: translate(
     -50%,
