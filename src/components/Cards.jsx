@@ -6,20 +6,20 @@ import { Link } from "react-router-dom";
 const cardsData = [
   {
     to: "/Page2",
-    imgSrc: "../assets/KBOvsMLB.png",  // removed "src/"
+    imgSrc: "public/KBOvsMLB.png",  // removed "src/"
     title: "Baseball Across Cultures",
     date: "6 Oct 2017",
     tags: ["HTML"],
   },
   {
     href: "https://github.com/jpa203/Junho_JP_Heap_Project/blob/main/README.md",
-    imgSrc: "../assets/heap.png",  // removed "src/"
+    imgSrc: "public/heap.png",  // removed "src/"
     title: "Heap Doc Clustering Algorithm",
     tags: ["HTML"],
   },
   {
     href: "https://junho-eum.github.io/dental_map.html",
-    imgSrc: "../assets/dentalClinic.png",  // removed "src/"
+    imgSrc: "public/dentalClinic.png",  // removed "src/"
     title: "Clinic Location Finder",
     tags: ["HTML"],
   },
