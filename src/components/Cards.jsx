@@ -1,25 +1,28 @@
 import React from "react";
 import "./styles/Cards.css";
 import Page2 from "../pages/PageTwo.jsx";
-
+import KBOvsMLB from '../assets/KBOvsMLB.png';
+import heap from '../assets/heap.png';
+import dentalClinic from '../assets/dentalClinic.png';
 import { Link } from "react-router-dom";
+
 const cardsData = [
   {
     to: "/Page2",
-    imgSrc: "assets/KBOvsMLB.png",
+    imgSrc: KBOvsMLB,
     title: "Baseball Across Cultures",
     date: "6 Oct 2017",
     tags: ["HTML"],
   },
   {
     href: "https://github.com/jpa203/Junho_JP_Heap_Project/blob/main/README.md",
-    imgSrc: "assets/heap.png",
+    imgSrc: heap,
     title: "Heap Doc Clustering Algorithm",
     tags: ["HTML"],
   },
   {
     href: "https://junho-eum.github.io/dental_map.html",
-    imgSrc: "assets/dentalClinic.png",
+    imgSrc: dentalClinic,
     title: "Clinic Location Finder",
     tags: ["HTML"],
   },
