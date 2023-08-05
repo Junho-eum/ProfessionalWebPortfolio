@@ -162,6 +162,7 @@ function PageFour() {
                     
                     </div>
                     </section>
+                    <div className='content-container-3'>
                     <section className="et-slide-3 section3" id="tab-PCA">
                         <div className="header-container">
                             <h1 className='intro1'>Principal Component Analysis&GMM</h1>
@@ -187,7 +188,13 @@ function PageFour() {
             
         
 
-            </div>
+                    </div>
+            
+                    <div className="content-container-4">
+                    <CardSliderPageFour/>
+                    </div>
+                </section>
+                </div>
             
                     <div className="content-container-4">
                     <CardSliderPageFour/>
