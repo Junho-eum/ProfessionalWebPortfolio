@@ -187,14 +187,14 @@ function PageFour() {
                             <strong>6. Tactical Baserunning:</strong> Reflects a team's tactical approach to advancing runners and gaining bases, with less focus on walks or getting hit by pitches.
                             </p>
                         <br></br>
-            
+                    <div className="content-container-4">
+                    <CardSliderPageFour/>
+                    </div>
         
 
                     </div>
             
-                    <div className="content-container-4">
-                    <CardSliderPageFour/>
-                    </div>
+
                 </section>
                 </div>
                 
