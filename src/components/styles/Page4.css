@@ -173,13 +173,13 @@ a {
 .content-container-3 {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: left;
     padding-top:1em; /* Space below header container */
     width: 100%;
     height: auto; /* Allow the container to adjust its height according to its content */
     overflow: visible; /* Enable full component display */
     flex-direction: column;
-    margin-bottom: 210vh;
+    margin-bottom: 200vh;
     
     
 }
