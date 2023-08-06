@@ -30,12 +30,12 @@ a {
   /* Set the width to your desired width or use max-content to fit the content */
   width: max-content;
   /* Optionally add padding to the cards wrapper to center the cards */
-  padding: 0 2rem;
+  padding: 2rem;
 
   /* Change the grid-template-columns to arrange the cards horizontally */
   display: grid;
   grid-auto-flow: column; /* Set the cards to flow in a single row */
-  grid-gap: 4rem;
+  grid-gap: 3rem;
 }
 
 .card {
@@ -51,7 +51,7 @@ a {
   font-size: 3vw;
   color: white;
   border-radius: 1em;
-  padding: 1em;
+  padding: 0em;
   /*margin: 2em;*/
   display: flex;
   align-items: flex-end;
@@ -136,6 +136,7 @@ a {
   background: black;
   width: 200%;
   height: 200%;
+
 }
 
 .card:hover {
