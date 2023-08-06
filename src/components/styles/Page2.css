@@ -11,7 +11,7 @@
   margin-top: 2rem;
   width: 40%;
   padding-left: 2rem;
-  color: black;
+  color: white;
 }
 .content-3 {
   display: flex;
@@ -54,28 +54,26 @@
 
 .htmlComp {
   position: relative;
-  width: 40%;
+  width: 100%;
   height: 100%; /* Set height to 100% of the parent container */
-  padding-bottom: 10%;
-  background: black;
+  
+  background: white;
 }
 
 /* style and pos for 3d plot */
 .left-side {
-  position: relative;
+  position: absolute;
   overflow: auto;
   width: 100%;
   height: 100%; /* Set height to 100% of the parent container */
-  background: black;
-
+  background: white;
   /* Set height container */
-  margin-top: vh;
-  margin-bottom: 100px;
+
 }
 
 /* style and pos for heatmap */
 .left-side2 {
-  position: relative;
+  position: absolute;
   overflow: visible;
   width: 100%;
   
@@ -97,7 +95,7 @@
   background: red;
 }
 .description {
-  color: black;
+  color: white;
 }
 .container-fluid {
   margin: 20px 0; /* This adds 20px of space to the top and bottom of each container */
@@ -110,15 +108,9 @@
   border: 1px solid white; /* This adds a 1px black border around each container */
 }
 
-.container-3dPlot {
-  height: 80vh;
-  margin-top: 17rem;
-
-}
-
 .container-heatmap {
   height: 153vh;
-  width: 90vw;
+  width: 100vw;
 }
 
 .figure2 {
@@ -129,4 +121,25 @@
 }
 .Intro{
   color: black;
+}
+/* Media query for screens smaller than 768 pixels */
+@media (max-width: 100vw) {
+  .left-side {
+    position: static; /* Reset positioning for small screens */
+    height: 100%; /* Flexible height */
+  }
+}
+
+/* Media query for screens smaller than 768 pixels */
+@media (max-height: 100vh) {
+  .left-side {
+    position: static; /* Reset positioning for small screens */
+    width: 100%; /* Flexible height */
+  }
+  @media (max-height: 100vh) {
+  .left-side2 {
+    position: static; /* Reset positioning for small screens */
+    width: 100%; /* Flexible height */
+  }
+}
 }
