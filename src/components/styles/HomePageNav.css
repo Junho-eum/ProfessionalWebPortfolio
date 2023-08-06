@@ -1,51 +1,46 @@
 .NavulList {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    font: bold 1.5rem sans-serif;
-    text-transform: uppercase;
-    color: grey;
-  }
-  .NavulList .NavList {
-    padding: 0 .5em .25em;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    transition: .3s;
-  }
-  .NavulList .NavList:hover {
-    color: #fff;
-  }
-  .NavulList .NavList:before {
-    content: "";
-    position: absolute;
-    inset: calc(100% - 3px) 0 0 0; /* 3px = the thickness */
-    background: #ce4f20; /* the color */
-    scale: 0 1;
-    transition: .3s, translate 0s .3s;
-  }
-  .NavulList:hover .NavList:before {
-    scale: 1;
-  }
-  .NavulList .NavList:hover:before {
-    translate: 0;
-    transition: .3s;
-  }
-  .NavulList:hover .NavList:has(~ .NavList:hover):before {
-    translate: 100% 0;
-    transition: .2s .2s,scale 0s .4s;
-  }
-  .NavulList:hover .NavList:hover ~ .NavList:before {
-    translate: -100% 0;
-    transition: .2s .2s,scale 0s .4s;
-  }
-  
-  
-  body {
-    margin: 0;
-    min-height: 100vh;
-    display: grid;
-    place-content: center;
-    background: #000;
-  }
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  font: bold 2vw sans-serif; /* vw unit scales with the window width */
+  text-transform: uppercase;
+  color: white;
+  margin-top: 2vh; /* vh unit scales with the window height */
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.NavulList .NavList {
+  padding: 0 1vw .25em; /* vw unit scales with the window width */
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: .3s;
+}
+.NavulList .NavList:before {
+  content: "";
+  position: absolute;
+  inset: calc(100% - 3px) 0 0 0;
+  background: #ce4f20;
+  scale: 0 1;
+  transition: .3s, translate 0s .3s;
+}
+.NavulList:hover .NavList:before {
+  scale: 1;
+}
+.NavulList .NavList:hover:before {
+  translate: 0;
+  transition: .3s;
+}
+.NavulList:hover .NavList:has(~ .NavList:hover):before,
+.NavulList:hover .NavList:hover ~ .NavList:before {
+  translate: 100% 0;
+  transition: .2s .2s, scale 0s .4s;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  background: #000;
+}
