@@ -61,7 +61,7 @@ a {
   transition: all, var(--transition-time);
   position: relative;
   overflow: hidden;
-  border: 10px solid #ccc;
+  border: 10px solid blue;
   text-decoration: none;
 }
 
