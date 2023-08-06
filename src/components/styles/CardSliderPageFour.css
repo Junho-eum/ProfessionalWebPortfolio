@@ -12,6 +12,7 @@
   overflow: hidden;
   margin: 20px auto;
   border-radius: 4px;
+    background: white !important;
 }
 
 #slider ul {
