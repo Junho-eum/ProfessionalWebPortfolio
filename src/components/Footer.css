@@ -62,13 +62,6 @@ footer .menu li a:hover {
   opacity: 1;
   color: #fff;
 }
-p {
-  color: #eee;
-  text-align: center;
-  margin-top: 15px;
-  margin-bottom: 10px;
-  font-size: 1.1em;
-}
 
 /*wave and animation*/
 footer .wave {
