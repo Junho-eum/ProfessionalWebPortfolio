@@ -309,5 +309,5 @@ a {
 }
 
 .section1 {
-    margin-bottom:100vh;
+    overflow:auto;
 }
