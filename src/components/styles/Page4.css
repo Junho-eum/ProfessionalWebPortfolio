@@ -99,6 +99,7 @@ a {
     flex-direction: row;
     margin-top: vh;
     background-color: white;
+    overflow: auto;
 }
 .header-container-5 {
     position: absolute;
