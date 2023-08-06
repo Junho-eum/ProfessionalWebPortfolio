@@ -15,7 +15,7 @@
 
 .textReveal-reveal-profile {
   position: absolute; /* Make it absolute */
-  top: 30%; /* Center vertically */
+  top: 37%; /* Center vertically */
   left: 50%; /* Center horizontally */
   transform: translate(
     -50%,
