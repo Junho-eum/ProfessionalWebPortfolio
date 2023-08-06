@@ -3,14 +3,15 @@ import "./styles/HomePageNav.css";
 
 function HomePageNav() {
     return (
-<ul className="NavulList">
-  <li className="NavList">Lrm</li>
-  <li className="NavList">Mollitia</li>
-  <li className="NavList">Commod!</li>
-  <li className="NavList" >Dolorum?</li>
-  <li className="NavList">Soluta.</li>
-</ul>
-    )
+        <ul className="NavulList">
+            <li className="NavList">About</li>
+            <li className="NavList">
+                <a href="https://github.com/Junho-eum/Baseball_Analytics/blob/main/KBO_analytics_draft3.pdf" target="_blank" rel="noopener noreferrer">
+                    Github
+                </a>
+            </li>
+        </ul>
+    );
 }
 
 export default HomePageNav;
