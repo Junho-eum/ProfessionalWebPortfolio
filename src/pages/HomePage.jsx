@@ -7,6 +7,7 @@ import "../components/styles/Typewriter.css"; // include this if your css is in 
 import Cards from "../components/Cards";
 import "../components/styles/Cards.css";
 import TextRevealProfile from "../components/TextRevealProfile";
+import HomePageNav from "../components/HomePageNav";
 
 function Page1() {
   useEffect(() => {
@@ -147,6 +148,7 @@ function Page1() {
   return (
     <>
       <div className="page page1">
+        <HomePageNav/>
         <div className="canvas-container">
           <canvas id="c"></canvas>
           <Cards />
