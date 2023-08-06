@@ -187,11 +187,11 @@ a {
     height: auto; /* Allow the container to adjust its height according to its content */
     overflow: visible; /* Enable full component display */
     flex-direction: column;
-    margin-bottom: 200vh;
-    
-    
+    margin-bottom: 100vh;
+    background-color: white;
 
 }
+
 .content-container-4 {
     display: flex;
     justify-content: space-between;
