@@ -16,8 +16,7 @@ a {
 }
 
 .baseball-title {
-    
-    background-size: cover;
+    background-color: dodgerblue;
     color: white
 }
 
@@ -41,7 +40,7 @@ a {
     justify-content: center;
     align-items: flex-start;
     /* Use this to change section2 container height */
-    height: 200vh;
+    height: 0vh;
     position: relative;
     background: white;
     text-align: center;
@@ -99,7 +98,6 @@ a {
     flex-direction: row;
     margin-top: vh;
     background-color: white;
-    overflow: auto;
 }
 .header-container-5 {
     position: absolute;
@@ -191,7 +189,6 @@ a {
     background-color: white;
 
 }
-
 .content-container-4 {
     display: flex;
     justify-content: space-between;
@@ -309,5 +306,5 @@ a {
 }
 
 .section1 {
-    overflow:auto;
+    margin-bottom:100vh;
 }
