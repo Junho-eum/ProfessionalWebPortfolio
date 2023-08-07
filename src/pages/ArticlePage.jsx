@@ -1,11 +1,14 @@
 import React from "react";
-import "../components/styles/ArticlePage.css"; // assuming the CSS is defined in this file
+import VerticalMenu from "../components/VerticalMenu"; // Adjust the path as needed
+import "../components/styles/ArticlePage.css";
 
 function ArticlePage() {
   return (
     <div className="article-body">
       <header className="article-header">header</header>
-      <nav className="article-nav">nav</nav>
+      <nav className="article-nav">
+        <VerticalMenu />
+      </nav>
       <section className="article-section">section</section>
       <aside className="article-aside">aside</aside>
       <footer className="article-footer">footer</footer>
