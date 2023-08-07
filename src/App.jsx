@@ -6,7 +6,7 @@ import Page4 from "./pages/PageFour";
 import ArticlePage from "./pages/ArticlePage"; // Import ArticlePage
 
 import "./App.css";
-import Navigation from "./components/Navigation";
+
 
 function App() {
   return (
