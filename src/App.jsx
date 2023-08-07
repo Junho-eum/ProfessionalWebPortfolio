@@ -1,25 +1,27 @@
-import React from "react";
-import { Link } from "react-router-dom"; // Import Link from react-router-dom
-import "./styles/HomePageNav.css";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Page1 from "./pages/HomePage";
+import Page2 from "./pages/PageTwo";
+import Page3 from "./pages/PageThree";
+import Page4 from "./pages/PageFour";
+import ArticlePage from "./pages/ArticlePage"; // Import ArticlePage
 
+import "./App.css";
+import Navigation from "./components/Navigation";
 
-function HomePageNav() {
+function App() {
   return (
-    <ul className="NavulList">
-      <li className="NavList">
-        <Link to="/article">About</Link>
-      </li>
-      <li className="NavList">
-        <a
-          href="https://github.com/Junho-eum/Baseball_Analytics/blob/main/KBO_analytics_draft3.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Github
-        </a>
-      </li>
-    </ul>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Page1 />} />
+          <Route path="page2" element={<Page4 />} />
+          <Route path="page3" element={<Page2 />} />
+          <Route path="page4" element={<Page4 />} />
+          <Route path="article" element={<ArticlePage />} /> {/* New route */}
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
-export default HomePageNav;
+export default App;
