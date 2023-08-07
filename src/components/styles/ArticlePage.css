@@ -3,8 +3,10 @@
   display: grid;
   grid-template-areas: 
     "header header header"
-    "nav section aside"
+    "nav section section" /* Extend section into the space previously used by aside */
     "footer footer footer";
+  grid-template-rows: 80px 1fr 50px;
+  grid-template-columns: 15% 1fr; /* Remove the column that was allocated for aside */
   grid-template-rows: 80px 1fr 50px;
   grid-template-columns: 15% 1fr 18%;
   grid-gap: 5px;
@@ -26,13 +28,14 @@
 
 .article-section {
 	background: #ABABAB;
-	grid-area: section;    
+	grid-area: section;
+	display: grid; /* Enable grid layout within the section */
+	grid-template-rows: repeat(auto-fill, minmax(100px, auto)); /* Define the grid's rows */
+	grid-auto-flow: row; /* Align grid items vertically */
+	gap: 10px; /* Optional: Add some space between grid items */
+	padding: 5px;
 }
 
-.article-aside {
-	background: #C9C9C9;
-	grid-area: aside; 
-}
 
 .article-footer {
 	background: #707070;
