@@ -7,7 +7,7 @@ function HomePageNav() {
   return (
     <ul className="NavulList">
       <li className="NavList">
-        <Link to="/article">About</Link>
+        <a>About</a>
       </li>
       <li className="NavList">
         <a
