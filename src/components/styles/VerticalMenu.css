@@ -1,19 +1,28 @@
-/* Define the variables */
 .article-vertical-menu-wrapper {
   max-width: 230px;
   margin: 50px auto;
   display: flex;
+  flex-direction: column;
   position: relative;
 }
 
+.article-vertical-menu {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  width: 220px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  /* ...other styles... */
+}
+
 .active-marker-article {
+  position: absolute;
+  left: 0;
   transition: transform 0.4s;
-  width: 5px;
+  width: 100%;
+  height: 5px;
   background-image: linear-gradient(90deg, #ff5e5e, #f54985);
-  background-size: 100%;
-  height: 30px;
-  margin-left: 7px;
-  transform: translateY(0px);
 }
 
 .article-vertical-menu-item {
@@ -22,7 +31,9 @@
   transition: all 0.4s;
   height: 41px; /* previously defined as a variable */
   text-align: right;
+  /* ...other styles... */
 }
+
 
 .article-vertical-menu-item.is-active-article {
   font-size: 1.4em;
