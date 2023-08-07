@@ -71,6 +71,16 @@
 
 }
 
+.left-side-mlb{
+  position: absolute;
+  overflow: auto;
+  width: 100%;
+  height: 100%; /* Set height to 100% of the parent container */
+  background: white;
+  /* Set height container */
+
+}
+
 /* style and pos for heatmap */
 .left-side2 {
   position: absolute;
