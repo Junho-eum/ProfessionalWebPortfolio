@@ -336,14 +336,15 @@ function PageFour() {
                     </p>
                     <div className="content-container-5">
                       <CardSliderPageFourTwo />
+                      <div className="div-footer">
+                        <Footer />
+                      </div>
                     </div>
                   </div>
                 </section>
               </div>
             </section>
           </div>
-          <div className="content-container-4"></div>
-          <Footer />
         </main>
       </div>
     );
