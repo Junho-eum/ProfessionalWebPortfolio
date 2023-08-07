@@ -1,16 +1,16 @@
 import React from "react";
-import "./ArticlePage.css"; // assuming the CSS is defined in this file
+import "../components/styles/ArticlePage.css"; // assuming the CSS is defined in this file
 
-const ArticlePage = () => {
+function ArticlePage() {
   return (
-    <div className="my-custom-body">
-      <header>header</header>
-      <nav>nav</nav>
-      <section>section</section>
-      <aside>aside</aside>
-      <footer>footer</footer>
+    <div className="article-body">
+      <header className="article-header">header</header>
+      <nav className="article-nav">nav</nav>
+      <section className="article-section">section</section>
+      <aside className="article-aside">aside</aside>
+      <footer className="article-footer">footer</footer>
     </div>
   );
-};
+}
 
 export default ArticlePage;
