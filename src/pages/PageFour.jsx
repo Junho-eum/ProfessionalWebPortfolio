@@ -12,6 +12,7 @@ import PCAPlots from "../components/PCAPlots";
 import "../components/styles/listStyle.css";
 import CardSliderPageFourTwo from '../components/CardSliderPageFour2';
 import Footer from '../components/Footer';
+import HtmlComp_MLB from '../components/3DHTML_MLB';
 
 function PageFour() {
     const title = "ANALYZING BASEBALL STATISTICS ACROSS CULTURES:"
@@ -85,7 +86,6 @@ function PageFour() {
       <div>
         <section
           className="et-hero-tabs baseball-title"
-          style={{ backgroundImage: `url(${KBOvsMLB})` }}
         >
           <h1 className="title">{title}</h1>
           <h2 className="subtitle">{subtitle}</h2>
@@ -145,6 +145,10 @@ function PageFour() {
 
           {/* <p id="tab-flexbox"></p> */}
           <div className="left-side">
+            <div className="content-container-1 htmlcomp-container">
+              <HtmlComp_MLB />
+            </div>
+
             <section className="et-slide-2 slide2" id="tab-methodology">
               <div className="header-container-2">
                 <h1>Methodology</h1>
