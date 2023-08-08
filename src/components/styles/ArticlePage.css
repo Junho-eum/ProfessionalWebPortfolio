@@ -1,47 +1,42 @@
-.article-body {
-  font-family: segoe-ui_normal,Segoe UI,Segoe,Segoe WP,Helvetica Neue,Helvetica,sans-serif;
-  display: grid;
-  grid-template-areas: 
-    "header header header"
-    "nav section section" /* Extend section into the space previously used by aside */
-    "footer footer footer";
-  grid-template-rows: 80px 1fr 50px;
-  grid-template-columns: 15% 1fr; /* Remove the column that was allocated for aside */
-  grid-template-rows: 80px 1fr 50px;
-  grid-template-columns: 15% 1fr 18%;
-  grid-gap: 5px;
-  height: 100vh;
-  margin: 10px;
+import React, { useState, useRef } from "react";
+import "./styles/VerticalMenu.css";
+
+function VerticalMenu({ onSectionChange }) {
+  const [activeItem, setActiveItem] = useState(0);
+  const markerRef = useRef(null);
+  const menuItems = ["CV", "RESEARCH", "ARTICLES", "SKILLS&PASSION"];
+
+  const toggleActive = (index, e) => {
+    e.preventDefault();
+    setActiveItem(index);
+    const offset = e.target.parentElement.offsetTop;
+    markerRef.current.style.transform = `translateY(${offset}px)`;
+    onSectionChange(index);
+  };
+
+  return (
+    <div className="article-vertical-menu-wrapper">
+      <ul className="article-vertical-menu">
+        {menuItems.map((item, index) => (
+          <li
+            key={index}
+            className={`article-vertical-menu-item ${
+              index === activeItem ? "is-active-article" : ""
+            }`}
+          >
+            <a
+              href="#"
+              className="link--inverse-menu-article"
+              onClick={(e) => toggleActive(index, e)}
+            >
+              {item}
+            </a>
+          </li>
+        ))}
+        <i className="active-marker-article" ref={markerRef}></i>
+      </ul>
+    </div>
+  );
 }
 
-/* rest of the CSS rules */
-.article-header {
-	background: #707070;
-	grid-area: header;
-}
-
-
-.article-nav {
-	background: #C9BFBF;
-	grid-area: nav; 
-}
-
-.article-section {
-	background: #ABABAB;
-	grid-area: section;
-	display: grid; /* Enable grid layout within the section */
-	grid-template-rows: repeat(auto-fill, minmax(100px, auto)); /* Define the grid's rows */
-	grid-auto-flow: row; /* Align grid items vertically */
-	gap: 10px; /* Optional: Add some space between grid items */
-	padding: 5px;
-}
-
-
-.article-footer {
-	background: #707070;
-	grid-area: footer;
-}
-
-.article-header, .article-nav, .article-section, .article-aside, .article-footer {
-	padding: 5px;
-}
+export default VerticalMenu;
