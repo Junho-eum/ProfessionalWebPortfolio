@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import '../components/styles/Page4.css';
+import '../components/styles/Page4.scss';
 import KBOvsMLB from '../assets/KBOvsMLB.png';
 import "../components/styles/Page2.css";
 import HtmlComp from '../components/PageSpecific/PageBaseball/3DHTML';
