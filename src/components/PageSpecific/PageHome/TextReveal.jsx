@@ -1,6 +1,6 @@
 // TextReveal.jsx
 import React from "react";
-import "../../styles/TextReveal.css";
+import "../../styles/TextReveal.scss";
 
 function TextReveal() {
   return (
