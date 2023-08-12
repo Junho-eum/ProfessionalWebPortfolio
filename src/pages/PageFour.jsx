@@ -2,13 +2,13 @@ import React, { useState, useEffect, useRef } from 'react';
 import '../components/styles/Page4.css';
 import KBOvsMLB from '../assets/KBOvsMLB.png';
 import "../components/styles/Page2.css";
-import HtmlComp from "../components/3DHTML.jsx";
+import HtmlComp from '../components/PageSpecific/PageBaseball/3DHTML';
 import CardSliderPageFour from '../components/PageSpecific/PageBaseball/CardSliderPageFour';
 import HeatmapComp from "../components/Heatmap";
 import "../components/styles/listStyle.css";
 import CardSliderPageFourTwo from '../components/PageSpecific/PageBaseball/CardSliderPageFour2';
 import Footer from '../components/PageSpecific/PageBaseball/Footer';
-import HtmlComp_MLB from "../components/3DHTML_MLB";
+import HtmlComp_MLB from '../components/PageSpecific/PageBaseball/3DHTML_MLB';
 
 function PageFour() {
     const title = "ANALYZING BASEBALL STATISTICS ACROSS CULTURES:"
