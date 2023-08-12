@@ -10,6 +10,9 @@ function HomePageNav() {
         <Link to="/article">About</Link>
       </li>
       <li className="NavList">
+        <Link to="/skillsets">Skillsets</Link>
+      </li>
+      <li className="NavList">
         <a
           href="https://github.com/Junho-eum/Baseball_Analytics/blob/main/KBO_analytics_draft3.pdf"
           target="_blank"
