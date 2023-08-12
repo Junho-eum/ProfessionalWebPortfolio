@@ -5,7 +5,7 @@ import "../components/styles/Typewriter.css"; // include this if your css is in 
 import Cards from "../components/PageSpecific/PageHome/Cards";
 import "../components/styles/Cards.css";
 import TextRevealProfile from "../components/PageSpecific/PageHome/TextRevealProfile.jsx";
-import HomePageNav from "../components/PageSpecific/PageHome/TextRevealProfile.jsx";
+import HomePageNav from "../components/PageSpecific/PageHome/HomePageNav";
 
 
 function Page1() {
