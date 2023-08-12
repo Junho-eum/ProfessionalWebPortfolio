@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
-import VerticalMenu from "../components/VerticalMenu"; // Adjust the path as needed
+import VerticalMenu from "../components/PageSpecific/PageArticle/VerticalMenu"; // Adjust the path as needed
 import "../components/styles/ArticlePage.css";
-import FilterTab from "../components/FilterTab";
+import FilterTab from "../components/PageSpecific/PageArticle/FilterTab";
 
 function ArticlePage() {
   const [activeSection, setActiveSection] = useState(0);
