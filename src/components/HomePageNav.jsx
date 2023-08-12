@@ -7,7 +7,12 @@ function HomePageNav() {
   return (
     <ul className="NavulList">
       <li className="NavList">
-        <Link to="/article">About</Link>
+        <a
+          href="https://www.linkedin.com/in/junho-eum-239409187/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >About
+        </a>
       </li>
       <li className="NavList">
         <Link to="/skillsets">Skillsets</Link>
