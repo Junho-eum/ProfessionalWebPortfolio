@@ -1,6 +1,6 @@
 import React from "https://cdn.skypack.dev/react";
 import ReactDOM from "https://cdn.skypack.dev/react-dom";
-import "./styles/Skillset.scss";
+import "./styles/SkillSet.scss";
 
 const COLORS = [
   "#bbf7d0",
