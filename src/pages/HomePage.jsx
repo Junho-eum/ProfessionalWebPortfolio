@@ -3,10 +3,9 @@ import "../App.css";
 import TextReveal from "../components/PageSpecific/PageHome/TextReveal"; // Import the new component
 import "../components/styles/Typewriter.css"; // include this if your css is in Typewriter.css
 import Cards from "../components/PageSpecific/PageHome/Cards";
-import "../components/styles/Cards.css";
+import "../components/styles/Cards.scss";
 import TextRevealProfile from "../components/PageSpecific/PageHome/TextRevealProfile.jsx";
 import HomePageNav from "../components/PageSpecific/PageHome/HomePageNav";
-
 
 function Page1() {
   useEffect(() => {
