@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/Cards.css";
+import "../../styles/Cards.scss";
 import KBOvsMLB from "../../../assets/KBOvsMLB.png";
 import heap from "../../../assets/heap.png";
 import dentalClinic from "../../../assets/dentalClinic.png";
@@ -56,11 +56,13 @@ const Card = ({ num, to, href, imgSrc, title, description, date, tags }) => {
 
 
 const Cards = () => (
-  <section className="cards-wrapper">
-    {cardsData.map((cardData, index) => (
-      <Card key={index} {...cardData} />
-    ))}
-  </section>
+  <div className="card-container">
+    <section className="cards-wrapper">
+      {cardsData.map((cardData, index) => (
+        <Card key={index} {...cardData} />
+      ))}
+    </section>
+  </div>
 );
 
 export default Cards;
