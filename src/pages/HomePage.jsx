@@ -4,8 +4,9 @@ import TextReveal from "../components/PageSpecific/PageHome/TextReveal"; // Impo
 import "../components/styles/Typewriter.css"; // include this if your css is in Typewriter.css
 import Cards from "../components/PageSpecific/PageHome/Cards";
 import "../components/styles/Cards.css";
-import TextRevealProfile from "../components/TextRevealProfile";
-import HomePageNav from "../components/HomePageNav";
+import TextRevealProfile from "../components/PageSpecific/PageHome/TextRevealProfile.jsx";
+import HomePageNav from "../components/PageSpecific/PageHome/TextRevealProfile.jsx";
+
 
 function Page1() {
   useEffect(() => {
