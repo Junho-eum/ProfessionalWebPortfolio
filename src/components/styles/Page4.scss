@@ -1,0 +1,233 @@
+a {
+  text-decoration: none;
+}
+
+.et-hero-tabs,
+.et-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 50vh;
+  position: relative;
+  background: white;
+  text-align: left;
+  padding: 0;
+}
+
+.baseball-title {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.et-slide-2,
+.et-slide-3,
+.et-slide-4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  background: white;
+  text-align: center;
+  padding: 0;
+  height: 0vh;
+
+  &.et-slide-3 {
+    height: 100vh;
+    padding: 0 2em;
+    margin-top: 34vh;
+    margin-bottom: 10rem;
+  }
+
+  &.et-slide-4 {
+    height: 10vh;
+    margin-top: -100vh;
+    margin-bottom: 10vh;
+  }
+}
+
+.header-container,
+.header-container-1,
+.header-container-5 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: left;
+  flex-direction: row;
+  background-color: white;
+
+  &.header-container-1 {
+    margin-top: vh;
+  }
+
+  &.header-container-5 {
+    margin-top: 10vh;
+  }
+}
+
+.header-container-2 {
+  position: relative;
+  width: 100%;
+  text-align: left;
+  margin-top: 400vh;
+}
+
+.et-hero-tabs h1,
+.et-slide h1 {
+  font-size: 2rem;
+  margin: 10;
+  letter-spacing: 0.6rem;
+}
+
+.et-hero-tab-title, .et-slide-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 50vh;
+  position: relative;
+  background: white;
+  text-align: left;
+  padding: 0;
+}
+
+.et-hero-tab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  color: #000;
+  letter-spacing: 0.1rem;
+  transition: all 0.5s ease;
+  font-size: 0.8rem;
+
+  &:hover {
+    color: white;
+    background: rgba(102, 177, 241, 0.8);
+    transition: all 0.5s ease;
+  }
+}
+
+.et-hero-tabs-container {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  z-index: 10;
+  margin-left: 0;
+
+  &--top {
+    position: fixed;
+    top: 0;
+  }
+}
+
+.et-hero-tab-slider {
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 6px;
+  background: #66B1F1;
+  transition: left 0.3s ease;
+}
+
+.header-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: left;
+  flex-direction: row;
+  margin-top: 5vh;
+  background-color: white;
+}
+
+.image-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  img {
+    flex: 1 0 auto;
+    margin: 10px;
+    max-width: calc(33% - 20px);
+    height: auto;
+  }
+}
+
+.content-container-1,
+.content-container-3,
+.content-container-4,
+.content-container-5 {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1em;
+  width: 100%;
+  overflow: visible;
+  flex-direction: column;
+
+  &.content-container-1 {
+    align-items: flex-start;
+    height: 100vh;
+    flex-direction: row;
+  }
+
+  &.content-container-3 {
+    align-items: left;
+    height: auto;
+    margin-bottom: 100vh;
+    background-color: white;
+  }
+
+  &.content-container-4 {
+    align-items: center;
+    height: auto;
+    margin-top: vh;
+    margin-bottom: 150vh;
+  }
+}
+
+.content-container-10 {
+  margin-top: 5vh;
+}
+
+.htmlcomp-container {
+  margin-bottom: 10vh;
+}
+
+.section1 {
+  margin-bottom: 100vh;
+}
+
+// Media queries
+@media (min-width: 500px) {
+  // ...
+}
+
+@media (min-width: 800px) {
+  // ...
+}
+
+
+@media (min-width: 500px) {
+  .et-hero-tabs h1,
+  .et-slide h1,
+  .et-slide-2 h1 {
+    font-size: 3rem;
+    letter-spacing: 0.01rem;
+    padding-top: 20px;
+  }
+
+  // Rest of the styles...
+}
+
+@media (min-width: 800px) {
+  .header-container {
+    flex-direction: row;
+  }
+}
+
+// Rest of the styles...
