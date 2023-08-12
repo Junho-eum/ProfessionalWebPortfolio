@@ -2,8 +2,9 @@ import React from "react";
 import "../components/styles/Page2.css";
 import HtmlComp from "../components/3DHTML.jsx";
 import HeatmapComp from "../components/Heatmap";
-import GmmCluster from "../components/GmmCluster";
 
+
+import GmmCluster from "../components/GmmCluster";
 function Page2() {
   return (
     <div className="page">
