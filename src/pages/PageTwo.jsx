@@ -1,7 +1,7 @@
 import React from "react";
 import "../components/styles/Page2.css";
 import HtmlComp from "../components/PageSpecific/PageBaseball/3DHTML";
-import HeatmapComp from "../components/Heatmap";
+import HeatmapComp from "../components/PageSpecific/PageBaseball/Heatmap";
 
 function Page2() {
   return (
