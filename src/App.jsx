@@ -4,6 +4,7 @@ import Page2 from "./pages/PageTwo";
 import Page3 from "./pages/PageThree";
 import Page4 from "./pages/PageFour";
 import ArticlePage from "./pages/ArticlePage"; // Import ArticlePage
+import Skillsets from "./components/SkillSet";
 
 import "./App.css";
 import Navigation from "./components/Navigation";
@@ -18,6 +19,7 @@ function App() {
           <Route path="page3" element={<Page2 />} />
           <Route path="page4" element={<Page4 />} />
           <Route path="article" element={<ArticlePage />} /> {/* New route */}
+          <Route path="skillsets" element={<Skillsets />} /> {/* New route */}
         </Routes>
       </div>
     </Router>
