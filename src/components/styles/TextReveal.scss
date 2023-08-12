@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+@import "../Variables/variables.scss";
+
+$textReveal-color: #fff;
+$revealer-bg-color: #f2f98b;
+$animation-duration: 800ms;
+$animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+$animation-delay: 2s;
+$iterations: 1;
+
+.textReveal-reveal {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4vw;
+  color: $textReveal-color;
+  white-space: nowrap;
+  cursor: default;
+  text-transform: uppercase;
+  font-family: $titleFont;
+  animation: text $animation-duration $animation-timing-function $animation-delay $iterations both;
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $revealer-bg-color;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    pointer-events: none;
+   animation: revealer $animation-duration $animation-timing-function $animation-delay $iterations both;
+  }
+}
+
+@keyframes text {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes revealer {
+  0%,
+  50% {
+    transform-origin: 0 50%;
+  }
+
+  60%,
+  100% {
+    transform-origin: 100% 50%;
+  }
+
+  60% {
+    transform: scaleX(1);
+  }
+
+  100% {
+    transform: scaleX(0);
+  }
+}
