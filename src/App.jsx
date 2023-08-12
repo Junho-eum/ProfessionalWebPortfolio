@@ -5,9 +5,8 @@ import Page3 from "./pages/PageThree";
 import Page4 from "./pages/PageFour";
 import ArticlePage from "./pages/ArticlePage"; // Import ArticlePage
 import Skillsets from "./components/PageSpecific/PageSkillSet/SkillSet";
-
 import "./App.css";
-import Navigation from "./components/Navigation";
+
 
 function App() {
   return (
