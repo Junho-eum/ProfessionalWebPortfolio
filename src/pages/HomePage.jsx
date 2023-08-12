@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import "../App.css";
-import Navigation from "../components/Navigation";
 import TextReveal from "../components/PageSpecific/PageHome/TextReveal"; // Import the new component
 import "../components/styles/Typewriter.css"; // include this if your css is in Typewriter.css
 import Cards from "../components/PageSpecific/PageHome/Cards";
