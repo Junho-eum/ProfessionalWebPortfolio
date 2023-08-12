@@ -1,3 +1,5 @@
+@import "../Variables/variables.scss";
+
 a {
   text-decoration: none;
 }
@@ -10,14 +12,13 @@ a {
   align-items: flex-start;
   height: 50vh;
   position: relative;
-  background: white;
+  background: white; 
   text-align: left;
   padding: 0;
-}
-
-.baseball-title {
+  &.baseball-title {
   background-color: dodgerblue;
   color: white;
+}
 }
 
 .et-slide-2,
@@ -29,14 +30,16 @@ a {
   position: relative;
   background: white;
   text-align: center;
-  padding: 0;
+  
   height: 0vh;
+  padding-left: 1rem;
 
   &.et-slide-3 {
     height: 100vh;
-    padding: 0 2em;
+    
     margin-top: 34vh;
     margin-bottom: 10rem;
+
   }
 
   &.et-slide-4 {
@@ -55,6 +58,7 @@ a {
   text-align: left;
   flex-direction: row;
   background-color: white;
+  font-family: $titleFont;
 
   &.header-container-1 {
     margin-top: vh;
@@ -73,10 +77,12 @@ a {
 }
 
 .et-hero-tabs h1,
+.et-hero-tabs h2,
 .et-slide h1 {
   font-size: 2rem;
   margin: 10;
   letter-spacing: 0.6rem;
+  font-family: $titleFont;
 }
 
 .et-hero-tab-title, .et-slide-title {
@@ -100,6 +106,7 @@ a {
   letter-spacing: 0.1rem;
   transition: all 0.5s ease;
   font-size: 0.8rem;
+  font-family: $titleFont;
 
   &:hover {
     color: white;
@@ -219,6 +226,7 @@ a {
     font-size: 3rem;
     letter-spacing: 0.01rem;
     padding-top: 20px;
+    font-family: $titleFont;
   }
 
   // Rest of the styles...
