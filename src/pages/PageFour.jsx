@@ -4,8 +4,6 @@ import KBOvsMLB from '../assets/KBOvsMLB.png';
 import "../components/styles/Page2.css";
 import HtmlComp from "../components/3DHTML.jsx";
 import CardSliderPageFour from '../components/PageSpecific/PageBaseball/CardSliderPageFour';
-import PCAComp from "../components/PCAScatter";
-import InteractionComp from "../components/Interaction";
 import GmmCluster from "../components/GmmCluster";
 import HeatmapComp from "../components/Heatmap";
 import PCAPlots from "../components/PCAPlots";
