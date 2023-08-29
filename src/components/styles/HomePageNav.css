@@ -47,3 +47,6 @@ body {
   place-content: center;
   background: #000;
 }
+.nav-link {
+  color:yellow;
+}
