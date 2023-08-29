@@ -111,7 +111,7 @@ function PageFour() {
           <section className="et-slide section1" id="tab-intro">
             <div className="header-container-1">
               <h1 className="intro1">INTRO</h1>
-              <p>
+              <p className="intro2">
                 Pythagorean Expectation in baseball, which proposes a
                 proportional win-loss ratio and their runs ratio, doesn't always
                 hold true. Some teams deviate from this theory due to factors
