@@ -8,6 +8,7 @@ function HomePageNav() {
     <ul className="NavulList">
       <li className="NavList">
         <a
+          className="nav-link"
           href="https://www.linkedin.com/in/junho-eum-239409187/"
           target="_blank"
           rel="noopener noreferrer"
@@ -16,10 +17,13 @@ function HomePageNav() {
         </a>
       </li>
       <li className="NavList">
-        <Link to="/skillsets">Skillsets</Link>
+        <Link className="nav-link" to="/skillsets">
+          Skillsets
+        </Link>
       </li>
       <li className="NavList">
         <a
+          className="nav-link"
           href="https://github.com/Junho-eum/Baseball_Analytics/blob/main/KBO_analytics_draft3.pdf"
           target="_blank"
           rel="noopener noreferrer"
