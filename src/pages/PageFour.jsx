@@ -111,7 +111,7 @@ function PageFour() {
           <section className="et-slide section1" id="tab-intro">
             <div className="header-container-1">
               <h1 className="intro1">INTRO</h1>
-              <h3>
+              <p>
                 Pythagorean Expectation in baseball, which proposes a
                 proportional win-loss ratio and their runs ratio, doesn't always
                 hold true. Some teams deviate from this theory due to factors
@@ -119,9 +119,9 @@ function PageFour() {
                 such anomalies through a comparative analysis across baseball
                 leagues, aiming to provide a nuanced understanding of team
                 performance beyond the Pythagorean Expectation.
-              </h3>
+              </p>
               <br></br>
-              <h3 className="intro2">
+              <p className="intro2">
                 The Pythagorean Expectation theory may not fully capture the
                 complexities and variabilities in sports like baseball. A 3D
                 plot of KBO data indicates the presence of outliers that the
@@ -132,7 +132,7 @@ function PageFour() {
                 understanding of these deviations. By analyzing features that
                 has strong influence on wins in KBO I aim to identify
                 distinctive characteristics that may influence these outliers.{" "}
-              </h3>
+              </p>
               <div className="content-container-1 htmlcomp-container">
                 <HtmlComp />
               </div>
