@@ -15,7 +15,7 @@ const TAGS = [
   "ReactJS",
   "Web_Development",
   "Data_Visualization",
-  "Typescript",
+  "LSTM",
   "AI_Modeling",
   "Image_Segmentation",
   "R",
@@ -23,6 +23,10 @@ const TAGS = [
   "GCP",
   "Java",
   "Statistics",
+  "Convolutional Networks",
+  "Natural Language Processing",
+  "Web Scrapping",
+  "Transformer Architecture"
 ];
 const DURATION = 15000;
 const ROWS = 9;
