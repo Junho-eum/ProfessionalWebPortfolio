@@ -58,7 +58,8 @@ const Tag = ({ text }) => (
   </div>
 );
 
-function Skillsets(){
+function Skillsets() {
+    const shuffledTags = shuffle(TAGS);
     return (
       <div className="app skillsets-container">
         <div className="app">
@@ -67,14 +68,14 @@ function Skillsets(){
             <p>My Skills that I've craved and am enthusiastic about</p>
           </header>
           <div className="tag-list">
-            {[...new Array(ROWS)].map((_, i) => (
+            {[...Array(ROWS)].map((_, i) => (
               <InfiniteLoopSlider
                 key={i}
                 duration={random(DURATION - 5000, DURATION + 5000)}
                 reverse={i % 2}
               >
-                {shuffle(TAGS)
-                  .slice(0, TAGS_PER_ROW)
+                {shuffledTags
+                  .slice(i * TAGS_PER_ROW, (i + 1) * TAGS_PER_ROW)
                   .map((tag) => (
                     <Tag text={tag} key={tag} />
                   ))}
@@ -85,7 +86,8 @@ function Skillsets(){
         </div>
       </div>
     );
-};
+}
+
 
 
 export default Skillsets;
