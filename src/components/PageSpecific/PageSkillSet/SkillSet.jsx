@@ -22,7 +22,7 @@ const TAGS = [
   "Cloud_Computing",
   "GCP",
   "Java",
-  "Statistics",
+  "Multivariate Statistics",
   "Convolutional Networks",
   "Natural Language Processing",
   "Web Scrapping",
