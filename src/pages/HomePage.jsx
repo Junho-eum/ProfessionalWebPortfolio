@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "../App.css";
 import TextReveal from "../components/PageSpecific/PageHome/TextReveal"; // Import the new component
 import "../components/styles/Typewriter.css"; // include this if your css is in Typewriter.css
@@ -8,6 +8,38 @@ import TextRevealProfile from "../components/PageSpecific/PageHome/TextRevealPro
 import HomePageNav from "../components/PageSpecific/PageHome/HomePageNav";
 
 function Page1() {
+  const [typedText, setTypedText] = useState("");
+  const aText = [
+    "Research & Projects:"
+  ];
+  const iSpeed = 140;
+
+  useEffect(() => {
+    let iIndex = 0;
+    let iArrLength = aText[iIndex].length;
+    let iTextPos = 0;
+    let sContents = "";
+
+    function typeWriter() {
+      sContents = " ";
+      sContents += aText[iIndex].substring(0, iTextPos) + "_";
+      setTypedText(sContents);
+
+      if (iTextPos++ === iArrLength) {
+        iTextPos = 0;
+        iIndex++;
+        if (iIndex !== aText.length) {
+          iArrLength = aText[iIndex].length;
+          setTimeout(typeWriter, 500);
+        }
+      } else {
+        setTimeout(typeWriter, iSpeed);
+      }
+    }
+
+    typeWriter();
+  }, []);
+
   useEffect(() => {
     function Particle(x, y, z) {
       this.x = x || 0;
@@ -146,16 +178,20 @@ function Page1() {
   return (
     <>
       <div className="page page1">
-        <HomePageNav/>
+        <HomePageNav />
         <div className="canvas-container">
           <canvas id="c"></canvas>
           <Cards />
         </div>
         {/* <Navigation /> */}
         <h1 className="page1-maintext"></h1>
+        <h1
+          className="page1-maintext"
+          dangerouslySetInnerHTML={{ __html: typedText }}
+        ></h1>
         <TextReveal /> {/* Use the new component */}
         <div className="container-lg">
-        <TextRevealProfile /> 
+          <TextRevealProfile />
         </div>
       </div>
     </>
