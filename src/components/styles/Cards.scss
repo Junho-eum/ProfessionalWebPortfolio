@@ -24,7 +24,6 @@
     color: inherit;
   }
 
-  
 .cards-wrapper {
   position: absolute;
   top: 75%;
@@ -142,6 +141,8 @@
 }
 
 .card-grid-space {
+  margin-left:-1.5rem;
+  margin-right:-0.3rem;
   .num {
     font-size: 3em;
     margin-bottom: 1.2rem;
