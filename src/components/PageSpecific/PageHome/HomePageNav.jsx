@@ -9,7 +9,7 @@ function HomePageNav() {
       <li className="NavList">
         <a
           className="nav-link"
-          href="https://www.linkedin.com/in/junho-eum-239409187/"
+          href="https://github.com/Junho-eum"
           target="_blank"
           rel="noopener noreferrer"
         >
