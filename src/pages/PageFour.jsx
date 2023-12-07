@@ -80,11 +80,7 @@ function PageFour() {
 
     return (
       <div>
-        <section
-          className="et-hero-tabs baseball-title"
-        >
-          <h1 className="title">{title}</h1>
-          <h2 className="subtitle">{subtitle}</h2>
+        <section className="et-hero-tabs baseball-title">
           <div className="et-hero-tabs-container" ref={tabContainerRef}>
             <a className="et-hero-tab" href="#tab-intro">
               INTRO
@@ -92,11 +88,17 @@ function PageFour() {
             <a className="et-hero-tab" href="#tab-methodology">
               Methodology
             </a>
-            <a className="et-hero-tab" href="#tab-PCA">
-              PCA
+            <a className="et-hero-tab" href="/3d_data.html">
+              3D Data
             </a>
-            <a className="et-hero-tab" href="#tab-interaction">
-              Interaction
+            <a className="et-hero-tab" href="/2d_scatter_plot.html">
+              2D Projection
+            </a>
+            <a
+              className="et-hero-tab"
+              href="/Weekly%20Average%20Sentiment%20Scores.html"
+            >
+              Weekly Sentiment
             </a>
             <a
               className="et-hero-tab"
