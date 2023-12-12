@@ -82,13 +82,13 @@ function PageFour() {
       <div>
         <section className="et-hero-tabs baseball-title">
           <div className="et-hero-tabs-container" ref={tabContainerRef}>
-            <a className="et-hero-tab" href="/biplot_1_2.html">
+            <a className="et-hero-tab" href="/pc1_pc2.html">
               Biplot_1
             </a>
-            <a className="et-hero-tab" href="/biplot_1_3.html">
+            <a className="et-hero-tab" href="/PC2_PC2.html">
               Biplot_2
             </a>
-            <a className="et-hero-tab" href="/3d_data.html">
+            <a className="et-hero-tab" href="/biplot.html">
               3D Data
             </a>
             <a className="et-hero-tab" href="/2d_scatter_plot.html">
