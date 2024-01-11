@@ -62,25 +62,25 @@
 
 /* style and pos for 3d plot */
 .left-side {
-  position: absolute;
+  position: relative;
   overflow: auto;
   width: 100%;
   height: 100%; /* Set height to 100% of the parent container */
   background: white;
   /* Set height container */
-  
+  z-index: 1;
 
 }
 
 
 .left-side-mlb{
-  position: absolute;
+  position: relative;
   overflow: auto;
   width: 100%;
   height: 100%; /* Set height to 100% of the parent container */
   background: white;
   /* Set height container */
-
+  z-index: 1;
 }
 
 /* style and pos for heatmap */
