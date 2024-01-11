@@ -112,29 +112,19 @@ function PageFour() {
         <main className="et-main">
           <section className="et-slide section1" id="tab-intro">
             <div className="header-container-1">
-              <h1 className="intro1">INTRO</h1>
+              <h1 className="intro1">INITIATIVE</h1>
               <p className="intro2">
                 Pythagorean Expectation in baseball, which proposes a
                 proportional win-loss ratio and their runs ratio, doesn't always
                 hold true. Some teams deviate from this theory due to factors
-                like exceptional performance or pure chance. This paper explores
-                such anomalies through a comparative analysis across baseball
-                leagues, aiming to provide a nuanced understanding of team
-                performance beyond the Pythagorean Expectation.
+                like exceptional performance or pure chance. This project
+                explores such anomalies through a comparative analysis across
+                baseball leagues, aiming to provide an understanding of team
+                performance beyond the Pythagorean Expectation. <br></br>
+                Below is a intuitive 3-d visualization of KBO and MLB baseball leagues:
               </p>
               <br></br>
-              <p className="intro2">
-                The Pythagorean Expectation theory may not fully capture the
-                complexities and variabilities in sports like baseball. A 3D
-                plot of KBO data indicates the presence of outliers that the
-                theory doesn't readily explain. These outliers could be
-                attributed to exceptional performances, strong pitching, or
-                random fluctuations. This paper will investigate these
-                contributing factors and attempt to provide a better
-                understanding of these deviations. By analyzing features that
-                has strong influence on wins in KBO I aim to identify
-                distinctive characteristics that may influence these outliers.{" "}
-              </p>
+
               <div className="content-container-1 htmlcomp-container">
                 <HtmlComp />
               </div>
