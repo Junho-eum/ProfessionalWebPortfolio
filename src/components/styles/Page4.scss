@@ -268,12 +268,12 @@ p.intro2 {
   background-color: black; /* Black background */
   color: white; /* White text */
   text-align: center;
-  margin-top: -26vh; /* Adjust as necessary for spacing */
+  margin-top: -15vh; /* Adjust as necessary for spacing */
   margin-bottom: 0vh; /* Adjust as necessary */
-  font-family: Arial, sans-serif; /* Use your preferred font */
-  font-size: 1rem; /* Adjust the font size as needed */
+  font-family: $titleFont;
+  font-size: 3rem; /* Adjust the font size as needed */
   cursor: pointer; /* Change cursor on hover to indicate clickability */
-  padding: 10px; /* Add some padding for better visual appearance */
+  padding: 28px; /* Add some padding for better visual appearance */
 }
 
 .methodology-container {
