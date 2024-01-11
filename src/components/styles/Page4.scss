@@ -10,16 +10,23 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  height: 50vh;
+  height: 38vh;
   position: relative;
   background: white; 
   text-align: left;
   padding: 0;
-  &.baseball-title {
+}
+
+.et-hero-tabs.baseball-title,
+.et-slide.baseball-title {
   background-color: dodgerblue;
   color: white;
+  background-image: url('/banner1.png'); /* Updated path */
+  background-size: cover; /* This ensures that your image covers the entire div */
+  background-position: center; /* This will center your image in the div */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
 }
-}
+
 
 .et-slide-2,
 .et-slide-3,
@@ -33,7 +40,11 @@ a {
   
   height: 0vh;
   padding-left: 1rem;
-
+.et-slide-2 {
+  /* Set a minimum height or adjust as per the content */
+  min-height: 100vh; /* Example: setting a minimum height */
+    background-color: red; /* Temporary for debugging */
+}
   &.et-slide-3 {
     height: 100vh;
     
@@ -59,21 +70,24 @@ a {
   flex-direction: row;
   background-color: white;
   font-family: $titleFont;
+}
 
-  &.header-container-1 {
-    margin-top: vh;
-  }
+.header-container-1 {
+  /* Example: Setting top margin to 10vh */
+  margin-top: 0vh;
+}
 
-  &.header-container-5 {
-    margin-top: 10vh;
-  }
+.header-container-5 {
+  margin-top: 10vh;
 }
 
 .header-container-2 {
   position: relative;
   width: 100%;
   text-align: left;
-  margin-top: 400vh;
+  /* Adjusted margin-top */
+  margin-top: 50vh; /* Example: Adjust this value as needed */
+  z-index: 10; /* Ensure this is higher than the content containers */
 }
 
 .et-hero-tabs h1,
@@ -166,12 +180,13 @@ a {
 }
 
 .content-container-1,
+.content-container-2,
 .content-container-3,
 .content-container-4,
 .content-container-5 {
   display: flex;
   justify-content: space-between;
-  padding-top: 1em;
+  
   width: 100%;
   overflow: visible;
   flex-direction: column;
@@ -180,6 +195,13 @@ a {
     align-items: flex-start;
     height: 100vh;
     flex-direction: row;
+  }
+  &.content-container-2 {
+    align-items: flex-start;
+    height: 100vh;
+    flex-direction: row;
+    margin-bottom: 130vh; /* Provide space below the container */
+    z-index: 5; /* Lower than header-container-2 to keep it underneath */
   }
 
   &.content-container-3 {
@@ -202,7 +224,7 @@ a {
 }
 
 .htmlcomp-container {
-  margin-bottom: 10vh;
+  margin-bottom: -17vh; /* Adjust based on your design needs */
 }
 
 .section1 {
@@ -242,3 +264,26 @@ p.intro2 {
   margin-bottom: -10px;
   line-height: 1.6; 
 }
+.scroll-message {
+  background-color: black; /* Black background */
+  color: white; /* White text */
+  text-align: center;
+  margin-top: -26vh; /* Adjust as necessary for spacing */
+  margin-bottom: 0vh; /* Adjust as necessary */
+  font-family: Arial, sans-serif; /* Use your preferred font */
+  font-size: 1rem; /* Adjust the font size as needed */
+  cursor: pointer; /* Change cursor on hover to indicate clickability */
+  padding: 10px; /* Add some padding for better visual appearance */
+}
+
+.methodology-container {
+  width: 100%; /* Full width of the container */
+  padding: 20px; /* Add some padding for internal spacing */
+  margin-top: 20vh; /* Space from the top or previous element */
+  text-align: left; /* Align text to the left */
+  background-color: white; /* Background color of the container */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: adds a subtle shadow for depth */
+
+  /* Additional styling as needed */
+}
+
