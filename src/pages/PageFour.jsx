@@ -11,6 +11,7 @@ import CardSliderPageFourThree from "../components/PageSpecific/PageBaseball/Car
 import Footer from '../components/PageSpecific/PageBaseball/Footer';
 import HtmlComp_MLB from '../components/PageSpecific/PageBaseball/3DHTML_MLB';
 
+
 function PageFour() {
     const title = "ANALYZING BASEBALL STATISTICS ACROSS CULTURES:"
     const subtitle = "A STUDY OF THE KBO"
@@ -180,22 +181,38 @@ function PageFour() {
           <div className="content-container-3">
             <section className="et-slide-3 section3" id="tab-PCA">
               <div className="header-container">
-                <h1 className="intro1">Principal Component Analysis&GMM</h1>
-                <p>
-                  In the analysis, PCA was used to manage the high
-                  dimensionality of the dataset. This technique transformed the
-                  data into new orthogonal features, or "components", each
-                  representing a certain amount of the dataset's total variance.
-                  Sixteen KBO batting features were selected for this analysis,
-                  based on their strong interactions and impact on a team's
-                  offensive performance. By observing a scree plot and
-                  considering the cumulative explained variance, I decided to
-                  retain six components from the PCA. These components captured
-                  92.3% of the variation in the dataset, effectively condensing
-                  the information of 16 variables into 6, which greatly
-                  facilitated the subsequent GMM clustering.
-                </p>
-                <br></br>
+                <h2 className="intro1">
+                  Principal Component Analysis (PCA) Methodology
+                </h2>
+                <div>
+                  <p className="intro2">
+                    <strong>Preliminary Preprocessing:</strong> I started by
+                    selecting important variables and removing unnecessary ones
+                    from the dataset, resulting in a more focused dataset named
+                    matrix P with dimensions (323, 24).<br></br>
+                    <br></br>
+                    <strong>Data Standardization:</strong> For effective PCA,
+                    it's crucial to standardize the data so each variable has a
+                    mean of 0 and a standard deviation of 1. <br />I used the
+                    formula "P_std = (P - P_mean) / P_sd", where "P" is the
+                    data, "P_mean" is the average, and "P_sd" is the standard
+                    deviation.<br></br>
+                    <br></br>
+                    <strong>Computing the Covariance Matrix:</strong> Using the
+                    standardized data, I created a covariance matrix, labeled S,
+                    to understand the relationships between variables in terms
+                    of variance and covariance.<br></br>
+                    <br></br>
+                    <strong>Eigen Decomposition:</strong>
+                    <br></br>
+                    1. I decomposed the covariance matrix to find its
+                    eigenvalues and eigenvectors.<br></br>
+                    2. The eigenvalues reveal the variance captured by each PCA
+                    component, while eigenvectors show how to combine original
+                    variables to form these components.<br></br>
+                  </p>
+                </div>
+
                 <h1 className="intro1">Interpretation of PCA Components</h1>
                 <p>
                   The six retained PCA components each reveal different aspects
