@@ -140,14 +140,15 @@ function PageFour() {
               </div>
             </div>
           </section>
-
+          <div className="scroll-message">
+            Click here to scroll and see further content
+          </div>
           {/* <p id="tab-flexbox"></p> */}
           <div className="left-side">
-            <div className="content-container-1 htmlcomp-container">
+            <div className="content-container-2 htmlcomp-container">
               <HtmlComp_MLB />
             </div>
-
-            <section className="et-slide-2 slide2" id="tab-methodology">
+            <section className="et-slide-2" id="tab-methodology">
               <div className="header-container-2">
                 <h1>Methodology</h1>
                 <ul>
