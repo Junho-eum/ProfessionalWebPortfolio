@@ -201,7 +201,6 @@ a {
     height: 100vh;
     flex-direction: row;
     margin-bottom: 130vh; /* Provide space below the container */
-    z-index: 5; /* Lower than header-container-2 to keep it underneath */
   }
 
   &.content-container-3 {
