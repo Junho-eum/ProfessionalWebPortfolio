@@ -1,7 +1,7 @@
 function HtmlComp_MLB() {
   return (
     <>
-      <div className="container-3dPlot left-side">
+      <div className="container-3dPlot left-side-mlb">
         <p className="figure-description">
           Use your mouse to rotate the 3D plot. Scroll to zoom in and out.
         </p>
