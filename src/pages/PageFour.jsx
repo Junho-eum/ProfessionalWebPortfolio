@@ -121,7 +121,8 @@ function PageFour() {
                 explores such anomalies through a comparative analysis across
                 baseball leagues, aiming to provide an understanding of team
                 performance beyond the Pythagorean Expectation. <br></br>
-                Below is a intuitive 3-d visualization of KBO and MLB baseball leagues:
+                Below is a intuitive 3-d visualization of KBO and MLB baseball
+                leagues:
               </p>
               <br></br>
 
@@ -140,105 +141,34 @@ function PageFour() {
             </div>
             <section className="et-slide-2" id="tab-methodology">
               <div className="header-container-2">
-                <h1>Methodology</h1>
-                <ul>
-                  <li class="list-title">
-                    <h3>Correlation Analysis</h3>
-                    <ul>
-                      <li class="list-item">
-                        Initial data import and integrity check.
-                      </li>
-                      <li class="list-item">
-                        Removal of duplicates and null entries for data quality.
-                      </li>
-                      <li class="list-item">
-                        Identification of correlated variables with a heatmap.
-                      </li>
-                      <li class="list-item">
-                        Acknowledging limitations of the correlation method.
-                      </li>
-                      <li class="list-item">
-                        Dividing features into pitcher and batter categories for
-                        deeper insights.
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="list-title">
-                    <h3>
-                      Regression Analysis to Understand Influence of Batting and
-                      Pitching Variables
-                    </h3>
-                    <ul>
-                      <li class="list-item">
-                        Conducted regression analyses to understand impact of
-                        batting and pitching variables on win-loss percentage.
-                      </li>
-                      <li class="list-item">
-                        Found collective influence of normalized
-                        pitching-related features to be around 1.42, and
-                        batting-related features around 2.98.
-                      </li>
-                      <li class="list-item">
-                        41.7% of the variability in win-loss percentage was
-                        explained by pitching variables, and 28.4% by batting
-                        variables.
-                      </li>
-                      <li class="list-item">
-                        Discovered differing impacts of these variables on
-                        win-loss percentage, indicating a need for further
-                        examination of potential multicollinearity and
-                        interaction effects.
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="list-title">
-                    <h3>
-                      Principal Component Analysis with Gaussian Mixture Model
-                    </h3>
-                    <ul>
-                      <li>
-                        Applied Principal Component Analysis (PCA) in
-                        conjunction with Gaussian Mixture Models (GMM)
-                        clustering to reduce dimensionality and identify
-                        influential features.
-                      </li>
-                      <li class="list-item">
-                        Transformed the dataset using PCA into a new set of
-                        components, each representing a certain amount of total
-                        dataset variance.
-                      </li>
-                      <li class="list-item">
-                        Features for PCA and subsequent GMM were carefully
-                        chosen based on a correlation heatmap analysis.
-                      </li>
-                      <li class="list-item">
-                        Selected six components based on cumulative explained
-                        variance, condensing the original 16 variables to 6.
-                      </li>
-                      <li class="list-item">
-                        Each component represented specific aspects of
-                        performance, as evident from the various batting metrics
-                        they include.
-                      </li>
-                      <li class="list-item">
-                        Created a biplot to understand the relationship between
-                        original variables and PCA components.
-                      </li>
-                      <li class="list-item">
-                        Applied GMM clustering, with the optimal number of
-                        clusters determined by the lowest BIC and AIC values.
-                      </li>
-                      <li class="list-item">
-                        Assigned teams to respective clusters based on the
-                        Gaussian distribution they most closely matched.
-                      </li>
-                      <li class="list-item">
-                        Identified distinct team clusters, each defined by
-                        specific performance traits.
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
+                <h1 className="intro1">Data Exploration&Preprocessing</h1>
+                <p className="intro2">
+                  I compared team data from the Korean Baseball Organization
+                  (1982-2021) with Major League Baseball (2002-2023), using data
+                  from Baseball Reference. The focus was on 24 important
+                  variables to understand team and player performance.
+                </p>
+                <h2 className="intro1">Dataset Overview</h2>
+                <div>
+                  <p className="intro2">
+                    <strong>Team and Player Information:</strong> Includes IDs,
+                    team details, the year of data, and average player age.
+                    <br></br>
+                    <strong>Defensive Stats:</strong> Examines pitching metrics
+                    like ERA and Innings Pitched, and team defense stats such as
+                    double plays and caught stealing.<br></br>
+                    <strong>Offensive Stats:</strong> Looks at batting
+                    performance, including Hits, RBI, and Slugging Percentage,
+                    along with batter's age.<br></br>
+                    <strong>Analysis Process:</strong>
+                    <br></br>
+                    1. Cleaned the data by removing duplicates and filling in
+                    missing values.<br></br>
+                    2. Conducted a correlation analysis to see which variables
+                    most affect win ratios, using R and Python for
+                    visualizations (heatmap and bar chart).<br></br>
+                  </p>
+                </div>
               </div>
 
               <div className="content-container-3">
