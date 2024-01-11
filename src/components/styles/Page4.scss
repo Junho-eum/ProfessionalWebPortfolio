@@ -1,162 +1,293 @@
-.page {
+@import "../Variables/variables.scss";
+
+a {
+  text-decoration: none;
+}
+
+.et-hero-tabs,
+.et-slide {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: flex-start;
+  height: 38vh;
+  position: relative;
+  background: white; 
+  text-align: left;
+  padding: 0;
 }
 
-.content {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin-top: 2rem;
-  width: 40%;
-  padding-left: 2rem;
+.et-hero-tabs.baseball-title,
+.et-slide.baseball-title {
+  background-color: dodgerblue;
   color: white;
+  background-image: url('/banner1.png'); /* Updated path */
+  background-size: cover; /* This ensures that your image covers the entire div */
+  background-position: center; /* This will center your image in the div */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
 }
-.content-3 {
+
+
+.et-slide-2,
+.et-slide-3,
+.et-slide-4 {
   display: flex;
-  justify-content: space-between;
-  width: 100%;
-  /* height: 100%; */
-  margin-top: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  background: white;
+  text-align: center;
+  
+  height: 0vh;
+  padding-left: 1rem;
+.et-slide-2 {
+  /* Set a minimum height or adjust as per the content */
+  min-height: 100vh; /* Example: setting a minimum height */
+    background-color: red; /* Temporary for debugging */
+}
+  &.et-slide-3 {
+    height: 100vh;
+    
+    margin-top: 34vh;
+    margin-bottom: 10rem;
+
+  }
+
+  &.et-slide-4 {
+    height: 10vh;
+    margin-top: -100vh;
+    margin-bottom: 10vh;
+  }
 }
 
-.summary {
-  width: 40%;
-  padding-left: 2rem;
-  color: black;
+.header-container,
+.header-container-1,
+.header-container-5 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: left;
+  flex-direction: row;
+  background-color: white;
+  font-family: $titleFont;
 }
 
-.content-3 .summary-3 {
-  width: 60%;
-  color: black;
+.header-container-1 {
+  /* Example: Setting top margin to 10vh */
+  margin-top: 0vh;
+  z-index: 10;;
 }
 
-.summary-1 {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin-top: 2rem;
-  width: 40%;
-  padding-left: 2rem;
-  color: black;
+.header-container-5 {
+  margin-top: 10vh;
 }
 
-.content-1 {
-  display: flex;
-  justify-content: space-between;
-  width: 50%;
-  height: 100%;
-  width: 40%;
-  padding-left: 2rem;
-  color: black;
-}
-
-.htmlComp {
+.header-container-2 {
   position: relative;
   width: 100%;
-  height: 100%; /* Set height to 100% of the parent container */
-  
-  background: white;
+  text-align: left;
+  /* Adjusted margin-top */
+  margin-top: 50vh; /* Example: Adjust this value as needed */
+  z-index: 10; /* Ensure this is higher than the content containers */
 }
 
-/* style and pos for 3d plot */
-.left-side {
+.et-hero-tabs h1,
+.et-hero-tabs h2,
+.et-slide h1 {
+  font-size: 2rem;
+  margin: 10;
+  letter-spacing: 0.6rem;
+  font-family: $titleFont;
+}
+
+.et-hero-tab-title, .et-slide-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 50vh;
+  position: relative;
+  background: white;
+  text-align: left;
+  padding: 0;
+}
+
+.et-hero-tab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  color: #000;
+  letter-spacing: 0.1rem;
+  transition: all 0.5s ease;
+  font-size: 0.8rem;
+  font-family: $titleFont;
+
+  &:hover {
+    color: white;
+    background: rgba(102, 177, 241, 0.8);
+    transition: all 0.5s ease;
+  }
+}
+
+.et-hero-tabs-container {
+  display: flex;
+  flex-direction: row;
   position: absolute;
-  overflow: auto;
+  bottom: 0;
   width: 100%;
-  height: 100%; /* Set height to 100% of the parent container */
-  background: white;
-  /* Set height container */
+  height: 70px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  z-index: 10;
+  margin-left: 0;
+
+  &--top {
+    position: fixed;
+    top: 0;
+  }
+}
+
+.et-hero-tab-slider {
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 6px;
+  background: #66B1F1;
+  transition: left 0.3s ease;
+}
+
+.header-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: left;
+  flex-direction: row;
+  margin-top: 5vh;
+  background-color: white;
+}
+
+.image-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  img {
+    flex: 1 0 auto;
+    margin: 10px;
+    max-width: calc(33% - 20px);
+    height: auto;
+  }
+}
+
+.content-container-1,
+.content-container-2,
+.content-container-3,
+.content-container-4,
+.content-container-5 {
+  display: flex;
+  justify-content: space-between;
   
-
-}
-
-
-.left-side-mlb{
-  position: absolute;
-  overflow: auto;
   width: 100%;
-  height: 100%; /* Set height to 100% of the parent container */
-  background: white;
-  /* Set height container */
-
-}
-
-/* style and pos for heatmap */
-.left-side2 {
-  position: absolute;
   overflow: visible;
-  width: 100%;
-  
-  height: 100%; /* Height will scale proportionally */
-  background: white;
-}
-.left-side3 {
-  position: relative;
-  overflow: auto;
-  width: 70%;
-  height: auto;
-  background: red;
-}
-.left-side4 {
-  position: relative;
-  overflow: auto;
-  width: 60%;
-  height: 100%; /* Set height to 100% of the parent container */
-  background: red;
-}
-.description {
-  color: white;
-}
-.container-fluid {
-  margin: 20px 0; /* This adds 20px of space to the top and bottom of each container */
-  
-}
+  flex-direction: column;
 
-.container-fluid2 {
-  height: 70vh;
-  margin: 20px 0; /* This adds 20px of space to the top and bottom of each container */
-  border: 1px solid white; /* This adds a 1px black border around each container */
-}
+  &.content-container-1 {
+    align-items: flex-start;
+    height: 100vh;
+    flex-direction: row;
+  }
+  &.content-container-2 {
+    align-items: flex-start;
+    height: 100vh;
+    flex-direction: row;
+    margin-bottom: 150vh; /* Provide space below the container */
+  }
 
-.container-heatmap {
-  height: 153vh;
-  width: 100vw;
-}
+  &.content-container-3 {
+    align-items: left;
+    height: auto;
+    margin-bottom: 100vh;
+    background-color: white;
+  }
 
-.figure2 {
-  display: flex;
-  flex-direction: column; /* This will stack the children vertically */
-
-  width: 150%;
-}
-
-p.figure-description {
-  padding:30px
-}
-
-.Intro{
-  color: black;
-}
-/* Media query for screens smaller than 768 pixels */
-@media (max-width: 100vw) {
-  .left-side {
-    position: static; /* Reset positioning for small screens */
-    height: 100%; /* Flexible height */
+  &.content-container-4 {
+    align-items: center;
+    height: auto;
+    margin-top: vh;
+    margin-bottom: 150vh;
   }
 }
 
-/* Media query for screens smaller than 768 pixels */
-@media (max-height: 100vh) {
-  .left-side {
-    position: static; /* Reset positioning for small screens */
-    width: 100%; /* Flexible height */
+.content-container-10 {
+  margin-top: 5vh;
+}
+
+.htmlcomp-container {
+  margin-bottom: -17vh; /* Adjust based on your design needs */
+}
+
+.section1 {
+  margin-bottom: 100vh;
+}
+
+// Media queries
+@media (min-width: 500px) {
+  // ...
+}
+
+@media (min-width: 800px) {
+  // ...
+}
+
+
+@media (min-width: 500px) {
+  .et-hero-tabs h1,
+  .et-slide h1,
+  .et-slide-2 h1 {
+    font-size: 3rem;
+    letter-spacing: 0.01rem;
+    padding-top: 20px;
+    font-family: $titleFont;
   }
-  @media (max-height: 100vh) {
-  .left-side2 {
-    position: static; /* Reset positioning for small screens */
-    width: 100%; /* Flexible height */
+
+  // Rest of the styles...
+}
+
+@media (min-width: 800px) {
+  .header-container {
+    flex-direction: row;
   }
 }
+h1.intro1 {
+  text-align: center; /* Centers text inside the element */
 }
+
+p.intro2 {
+  margin-bottom: -10px;
+  line-height: 1.6; 
+  padding: 30px;
+}
+.scroll-message {
+  background-color: black; /* Black background */
+  color: white; /* White text */
+  text-align: center;
+  margin-top: -26vh; /* Adjust as necessary for spacing */
+  margin-bottom: 0vh; /* Adjust as necessary */
+  font-family: Arial, sans-serif; /* Use your preferred font */
+  font-size: 1rem; /* Adjust the font size as needed */
+  cursor: pointer; /* Change cursor on hover to indicate clickability */
+  padding: 10px; /* Add some padding for better visual appearance */
+}
+
+.methodology-container {
+  width: 100%; /* Full width of the container */
+  padding: 20px; /* Add some padding for internal spacing */
+  margin-top: 20vh; /* Space from the top or previous element */
+  text-align: left; /* Align text to the left */
+  background-color: white; /* Background color of the container */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: adds a subtle shadow for depth */
+
+  /* Additional styling as needed */
+}
+
