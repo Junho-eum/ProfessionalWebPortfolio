@@ -16,6 +16,13 @@ a {
   text-align: left;
   padding: 0;
 }
+.et-hero-tab{
+    border-right: 2px solid #000000; /* Black border, 2px thick */
+  /* other styles for your tabs */
+}
+.et-hero-tabs{
+  border: 2px solid #000000; /* Black border, 2px thick */
+}
 
 .et-hero-tabs.baseball-title,
 .et-slide.baseball-title {
@@ -25,14 +32,6 @@ a {
   background-size: cover; /* This ensures that your image covers the entire div */
   background-position: center; /* This will center your image in the div */
   background-repeat: no-repeat; /* Prevents the image from repeating */
-}
-
-.et-hero-tab{
-    border-right: 2px solid #000000; /* Black border, 2px thick */
-  /* other styles for your tabs */
-}
-.et-hero-tabs{
-  border: 2px solid #000000; /* Black border, 2px thick */
 }
 
 
