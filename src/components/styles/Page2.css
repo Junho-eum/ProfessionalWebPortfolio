@@ -131,6 +131,11 @@
 
   width: 150%;
 }
+
+p.figure-description {
+  padding:30px
+}
+
 .Intro{
   color: black;
 }
