@@ -55,7 +55,7 @@ a {
   &.et-slide-3 {
     height: 100vh;
     
-    margin-top: 34vh;
+    margin-top: 10vh;
     margin-bottom: 10rem;
 
   }
@@ -82,7 +82,7 @@ a {
 .header-container-1 {
   /* Example: Setting top margin to 10vh */
   margin-top: 0vh;
-  z-index: 10;;
+  
 }
 
 .header-container-5 {
@@ -94,8 +94,7 @@ a {
   width: 100%;
   text-align: left;
   /* Adjusted margin-top */
-  margin-top: 50vh; /* Example: Adjust this value as needed */
-  z-index: 10; /* Ensure this is higher than the content containers */
+  margin-top: -100vh; /* Example: Adjust this value as needed */
 }
 
 .et-hero-tabs h1,
@@ -201,20 +200,21 @@ a {
 
   &.content-container-1 {
     align-items: flex-start;
-    height: 100vh;
+    height: 75vh;
     flex-direction: row;
   }
   &.content-container-2 {
     align-items: flex-start;
-    height: 100vh;
+    height: 75vh;
     flex-direction: row;
     margin-bottom: 150vh; /* Provide space below the container */
+    padding: 10px;
   }
 
   &.content-container-3 {
     align-items: left;
     height: auto;
-    margin-bottom: 100vh;
+    margin-bottom: 20vh;
     background-color: white;
   }
 
@@ -236,6 +236,9 @@ a {
 
 .section1 {
   margin-bottom: 100vh;
+}
+.section3{
+  margin-bottom: 70vh;
 }
 
 // Media queries
