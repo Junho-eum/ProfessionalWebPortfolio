@@ -10,10 +10,18 @@ const CardSliderPageFourThree = () => {
   const slideWidth = 1200; // match the width of each slide in your CSS
 
   const slidesData = [
-    { image: 'batter_interaction_summ.png', title: 'Interaction Plot (Batter Features)', description: ' A comprehensive summary of these batting feature interactions is shown in the SHAP plot. Examining batting statistics I found a significant relationship between homeruns_scored and doubles with a coefficient of 032. This suggests teams skilled in hitting doubles also tend to score more home runs indicating a potential synergy between these hitting strategies.' },
-    { image: 'pitcher_interaction_summ.png', title: 'Interaction Plot (Pitcher Features)', description: 'In the pitching statistics analysis significant interactions were identified among ERA Earned Run Average batters faced hits_x home runs allowed and walks The analysis revealed that a pitchers ERA generally increases as they face more batters likely due to the rise in scoring opportunities Also there seems to be a connection between allowing more walks and conceding more home runs emphasizing the importance of pitcher control These interactions and their impacts on the game outcomes can be seen in the SHAP interaction plots'},
-    { image: 'Summary_plot_homeruns_ERA_interaction.png', title: 'ERA, home_runs_allowed Interaction Plot ', description: 'A deeper analysis into homeruns allowed and ERA revealed an intriguing correlation. When the ERA is low theres a significant interaction with low homerun counts. However when the ERA increases the number of homeruns allowed also rises particularly when the ERA is greater than 4.5. Essentially this means that teams that concede higher scores (greater than 4.5 ERA) typically allow more homeruns.' },
-  
+    {
+      image: "2-1.png",
+      title: "Interaction Plot (Batter Features)",
+      description:
+        " A comprehensive summary of these batting feature interactions is shown in the SHAP plot. Examining batting statistics I found a significant relationship between homeruns_scored and doubles with a coefficient of 032. This suggests teams skilled in hitting doubles also tend to score more home runs indicating a potential synergy between these hitting strategies.",
+    },
+    {
+      image: "Correlation.png",
+      title: "Interaction Plot (Pitcher Features)",
+      description:
+        "In the pitching statistics analysis significant interactions were identified among ERA Earned Run Average batters faced hits_x home runs allowed and walks The analysis revealed that a pitchers ERA generally increases as they face more batters likely due to the rise in scoring opportunities Also there seems to be a connection between allowing more walks and conceding more home runs emphasizing the importance of pitcher control These interactions and their impacts on the game outcomes can be seen in the SHAP interaction plots",
+    },
     // add more slides data as needed
   ];
 
