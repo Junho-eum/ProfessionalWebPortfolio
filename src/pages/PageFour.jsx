@@ -7,6 +7,7 @@ import CardSliderPageFour from '../components/PageSpecific/PageBaseball/CardSlid
 import HeatmapComp from "../components/PageSpecific/PageBaseball/Heatmap";
 import "../components/styles/listStyle.css";
 import CardSliderPageFourTwo from '../components/PageSpecific/PageBaseball/CardSliderPageFour2';
+import CardSliderPageFourThree from "../components/PageSpecific/PageBaseball/CardSliderPageFour3";
 import Footer from '../components/PageSpecific/PageBaseball/Footer';
 import HtmlComp_MLB from '../components/PageSpecific/PageBaseball/3DHTML_MLB';
 
@@ -82,11 +83,11 @@ function PageFour() {
       <div>
         <section className="et-hero-tabs baseball-title">
           <div className="et-hero-tabs-container" ref={tabContainerRef}>
-            <a className="et-hero-tab" href="/pc1_pc2.html">
-              Biplot_1
+            <a className="et-hero-tab" href="#tab-intro">
+              INTRO
             </a>
-            <a className="et-hero-tab" href="/PC2_PC2.html">
-              Biplot_2
+            <a className="et-hero-tab" href="#tab-preprocessing">
+              EDA
             </a>
             <a className="et-hero-tab" href="/biplot.html">
               3D Data
@@ -139,8 +140,8 @@ function PageFour() {
             <div className="content-container-2 htmlcomp-container">
               <HtmlComp_MLB />
             </div>
-            <section className="et-slide-2" id="tab-methodology">
-              <div className="header-container-2">
+            <section className="et-slide-2">
+              <div className="header-container-2" id="tab-preprocessing">
                 <h1 className="intro1">Data Exploration&Preprocessing</h1>
                 <p className="intro2">
                   I compared team data from the Korean Baseball Organization
@@ -172,7 +173,7 @@ function PageFour() {
               </div>
 
               <div className="content-container-3">
-                <HeatmapComp />
+                <CardSliderPageFourThree />
               </div>
             </section>
           </div>
