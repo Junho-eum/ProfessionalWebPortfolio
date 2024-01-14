@@ -4,14 +4,22 @@ import '../../styles/CardSliderPageFour.css'; // assuming you moved your CSS int
 const CardSliderPageFourFour = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slideRef = useRef(null);
-  const slideCount = 4; // replace with the actual number of slides
+  const slideCount = 2; // replace with the actual number of slides
   const slideWidth = 1200; // match the width of each slide in your CSS
 
   const slidesData = [
-    { image: '/PCA_screeplot.png', title: 'Scree Plot', description: 'In my Principal Component Analysis (PCA), I used a scree plot and cumulative explained variance to determine the number of components to retain. I chose six components, capturing approximately 92.3% of the dataset variation. This effectively distilled the crucial information from 16 variables into just six, making the subsequent Gaussian Mixture Model (GMM) clustering more manageable and insightful.' },
-    { image: 'Biplot_pca_batting.png', title: 'Bi Plot', description: 'Through a biplot analysis, I found that team metrics such as OBP, SLG, and OPS significantly enhance overall offensive performance. However, higher strikeouts often imply less offensive success. Interestingly, while sacrifice hits can negatively impact overall team statistics, they may also indicate superior plate discipline and speed. This study helps understand how individual team metrics influence winning probabilities in the KBO league.'},
-    { image: 'gmm_pcaLoadings.png', title: 'GMM Clustering', description: 'Ive categorized teams into unique clusters with GMM, represented visually through histograms which shows the distribution of principal components across clusters.' },
-    { image: 'pca_scatterplot_batter.png', title: 'Scatter Plot of GMM clusters', description: ' Identified distinctive clusters as : \n1. Offensive Powerhouses 2. Disciplined and Fast Teams 3. Opportunistic Speed Teams 4. Heavy Hitting Teams and Strategic Baserunning Teams These are based on batting metric contributions to performance factors This analysis is crucial for more effective KBO league strategies' },
+    {
+      image: "/heatmap1.png",
+      title: "Heatmap representation of KBO PCs",
+      description:
+        "I dissect notable variables, focusing on what the different loadings in various components imply.\nFirst Component 2 (0.339) Teams in this component exhibit high positive loadings for the WHIP variable, indicating a less effective pitching strategy characterized by a high number of walks and hits per innings pitched.\n A high WHIP value signifies that the pitchers allow too many batters to reach base, thus reflecting a potential area of concern and a possible indicator of poor pitching performance.\nStrategies for improvement include enhancing pitch selection, improving control to reduce walks, or working on defensive strategies to reduce hits allowed.\n\nOn the other hand, Component 1 (-0.164) represents teams maintaining a strong pitching performance, as illustrated by the negative loading on the WHIP variable.\nThese teams have successfully controlled the number of pitched walks and hit per inning, achieving a lower WHIP value and, consequently, a stronger defense strategy.\nTeams in these clusters are characterized by skilled pitchers who can maintain a low WHIP, possibly resulting in fewer scoring opportunities for opposing teams.\nTeams focus on nurturing pitcher talent and adopting strategies that favor a low WHIP to continue this trend. ",
+    },
+    {
+      image: "/heatmap2.png",
+      title: "Heatmap representation of MLB PCs",
+      description:
+        "Major League teams associated with component 3 (-0.299) reflect high negative loadings for the 'Caught Stealing' variable.\n This indicates that these teams have fewer instances of their players being caught while attempting to steal bases. Such teams either have exceptional base runners, adopt a conservative base-stealing approach, or both.\n\nContrarily, teams categorized within component 5 exhibit high positive loadings for the 'Caught Stealing' variable.\nThese teams experience a relatively higher number of instances where their base runners are caught stealing bases. While attempting to steal bases can demonstrate an aggressive offensive strategy, being frequently caught can impede momentum and waste scoring opportunities. It is indicative of either poor base running decisions or exceptional defense by the opposing team. ",
+    },
     // add more slides data as needed
   ];
 
