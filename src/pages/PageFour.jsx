@@ -8,6 +8,7 @@ import HeatmapComp from "../components/PageSpecific/PageBaseball/Heatmap";
 import "../components/styles/listStyle.css";
 import CardSliderPageFourTwo from '../components/PageSpecific/PageBaseball/CardSliderPageFour2';
 import CardSliderPageFourThree from "../components/PageSpecific/PageBaseball/CardSliderPageFour3";
+import CardSliderPageFourFour from "../components/PageSpecific/PageBaseball/CardSliderPageFour4";
 import Footer from '../components/PageSpecific/PageBaseball/Footer';
 import HtmlComp_MLB from '../components/PageSpecific/PageBaseball/3DHTML_MLB';
 
@@ -214,47 +215,19 @@ function PageFour() {
                 </div>
 
                 <h1 className="intro1">Interpretation of PCA Components</h1>
-                <p>
-                  The six retained PCA components each reveal different aspects
-                  of a team's performance:
-                  <br></br>
-                  <br></br>
-                  <strong>1. Overall Offensive Performance:</strong> A team's
-                  general offensive performance is captured by this component.
-                  It suggests that teams with high scores show strong offensive
-                  performances, yet fewer sacrifice hits.
-                  <br></br>
-                  <br></br>
-                  <strong>2. Plate Discipline and Speed:</strong> This component
-                  represents a mix of plate discipline and speed. High-scoring
-                  teams here display good discipline, proficient contact-making,
-                  and potentially have fast runners.
-                  <br></br>
-                  <br></br>
-                  <strong>3. Speed and Opportunism:</strong> This indicates a
-                  tendency for speed and situational play. High-scoring teams
-                  might be fast, seizing scoring opportunities, but may not hit
-                  many home runs.
-                  <br></br>
-                  <br></br>
-                  <strong>4. Sacrifice Play:</strong> Teams that often opt for
-                  sacrifice for the overall score are captured by this
-                  component.
-                  <br></br>
-                  <br></br>
-                  <strong>5. Aggressive Play and Efficiency:</strong> Represents
-                  a blend of aggressive play and efficient hitting. High-scoring
-                  teams could be hit by pitches often, draw walks, and hit
-                  efficiently for extra bases.
-                  <br></br>
-                  <br></br>
-                  <strong>6. Tactical Baserunning:</strong> Reflects a team's
-                  tactical approach to advancing runners and gaining bases, with
-                  less focus on walks or getting hit by pitches.
+                <h2 className="intro1">
+                  Heatmap Representation of PC loadings
+                </h2>
+                <p className="intro2">
+                  The loadings show how each variable in the dataset contributes
+                  to each principal component.<br></br>
+                  By examining these loadings, we can understand what each principal component represents in
+                  terms of the original variables.<br></br>
+                  Below is a heatmap of the loadings for the represetation of the first 8 principal components:
                 </p>
-                <br></br>
+              
                 <div className="content-container-4">
-                  <CardSliderPageFour />
+                  <CardSliderPageFourFour />
                 </div>
                 <section className="et-slide-4" id="tab-interaction">
                   <div className="header-container-5">
