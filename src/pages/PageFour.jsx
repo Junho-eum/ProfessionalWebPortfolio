@@ -221,38 +221,36 @@ function PageFour() {
                 <p className="intro2">
                   The loadings show how each variable in the dataset contributes
                   to each principal component.<br></br>
-                  By examining these loadings, we can understand what each principal component represents in
-                  terms of the original variables.<br></br>
-                  Below is a heatmap of the loadings for the represetation of the first 8 principal components:
+                  By examining these loadings, we can understand what each
+                  principal component represents in terms of the original
+                  variables.<br></br>
+                  Below is a heatmap of the loadings for the represetation of
+                  the first 8 principal components:
                 </p>
-              
+
                 <div className="content-container-4">
                   <CardSliderPageFourFour />
                 </div>
                 <section className="et-slide-4" id="tab-interaction">
                   <div className="header-container-5">
-                    <h1 className="intro1">
-                      Optimization and Interaction Analysis of Batting and
-                      Pitching Variables Using XGBoost Models
-                    </h1>
-                    <p>
-                      To better understand and capture the complex interactions
-                      between variables, I developed two XGBoost models for
-                      batter and pitcher data. The target variables were total
-                      runs scored and total runs allowed, respectively. By using
-                      Grid Search, I fine-tuned the models and achieved accuracy
-                      scores of 0.9837 and 0.9796 for the batter and pitcher
-                      data, respectively. The pitcher's data analysis revealed
-                      key insights into different pitching scenarios and
-                      strategies' impacts on game results, emphasizing the
-                      importance of a pitcher's control. These insights are
-                      visually depicted in the SHAP interaction plots.
+                    <h1 className="intro1">Decoding Team Dynamics</h1>
+                    <p className="intro2">
+                      I focused on the principal components that are most
+                      crucial in the dataset.<br></br> By analyzing the loadings
+                      and applying thresholds based on means and standard
+                      deviations, I identified the key elements and evaluated
+                      the strength of the variable’s impact on them.<br></br>
+                      Here, I present a brief description and title for each of
+                      these significant components:
                     </p>
+                    <h2 className="intro1">
+                      KBO Dataset Key Component Extraction
+                    </h2>
+                    <p className="intro2">
+                      
+                      </p>
                     <div className="content-container-5">
-                      <CardSliderPageFourTwo />
-                      <div className="div-footer">
-                        <Footer />
-                      </div>
+                      <div className="div-footer">{/* <Footer /> */}</div>
                     </div>
                   </div>
                 </section>
