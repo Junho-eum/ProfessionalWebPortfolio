@@ -34,6 +34,9 @@ a {
   background-repeat: no-repeat; /* Prevents the image from repeating */
 }
 
+.slide-description p {
+  white-space: pre-wrap;
+}
 
 .et-slide-2,
 .et-slide-3,
@@ -271,13 +274,15 @@ a {
 }
 h1.intro1 {
   text-align: center; /* Centers text inside the element */
+  font-size:2.5rem;
 }
 
 h2.intro1{
   padding-left: 30px;
   font-family: $titleFont;
-  font-size:2.3rem;
+  font-size:2.1rem;
 }
+
 p.intro2 {
   margin-bottom: -10px;
   line-height: 1.6; 
