@@ -64,15 +64,16 @@ a {
   }
 
   &.et-slide-4 {
-    height: 10vh;
+    height: 5vh;
     margin-top: -100vh;
     margin-bottom: 10vh;
+    text-align: left;
   }
 }
 
 .header-container,
-.header-container-1,
-.header-container-5 {
+.header-container-1
+{
   position: absolute;
   top: 0;
   right: 0;
@@ -84,12 +85,13 @@ a {
 
 .header-container-1 {
   /* Example: Setting top margin to 10vh */
-  margin-top: 0vh;
+  margin-top: 10vh;
   
 }
 
 .header-container-5 {
-  margin-top: 10vh;
+  margin-top: -50vh;
+  background-color: white;
 }
 
 .header-container-2 {
