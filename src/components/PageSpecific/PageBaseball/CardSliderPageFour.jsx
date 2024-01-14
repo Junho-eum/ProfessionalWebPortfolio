@@ -38,7 +38,6 @@ const CardSliderPageFour = () => {
 
   return (
     <div>
-      <h1 className="sliderTitle">Principal Component Analysis Visualizations</h1>
       <div id="slider">
         <a href="#" className="control_next" onClick={moveRight}>&gt;&gt;</a>
         <a href="#" className="control_prev" onClick={moveLeft}>&lt;&lt;</a>
