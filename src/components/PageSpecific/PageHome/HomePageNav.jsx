@@ -24,7 +24,7 @@ function HomePageNav() {
       <li className="NavList">
         <a
           className="nav-link"
-          href="https://github.com/Junho-eum/Baseball_Analytics/blob/main/KBO_analytics_draft3.pdf"
+          href="https://github.com/Junho-eum/MultiLeagueBaseballAnalytics/blob/main/STRATEGIC%20DIVERGENCE%20IN%20GLOBAL%20BASEBALL.pdf"
           target="_blank"
           rel="noopener noreferrer"
         >
