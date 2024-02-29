@@ -91,10 +91,10 @@ function PageFour() {
             <a className="et-hero-tab" href="#tab-preprocessing">
               EDA
             </a>
-            <a className="et-hero-tab" href="/유학강요China3.html">
+            <a className="et-hero-tab" href="/China3.html">
               3D Data
             </a>
-            <a className="et-hero-tab" href="/유학강요Japan3.html">
+            <a className="et-hero-tab" href="/Japan3.html">
               2D Projection
             </a>
             <a
