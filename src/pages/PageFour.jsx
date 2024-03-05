@@ -99,6 +99,12 @@ function PageFour() {
             </a>
             <a
               className="et-hero-tab"
+              href="/메이지효절록_3D_데이터 시각화.html"
+            >
+              Meiji
+            </a>
+            <a
+              className="et-hero-tab"
               href="/Weekly%20Average%20Sentiment%20Scores.html"
             >
               Weekly Sentiment
