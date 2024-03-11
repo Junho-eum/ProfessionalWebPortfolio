@@ -6,8 +6,8 @@ import '../../styles/Page4.scss'; // assuming you moved your CSS into this file
 const CardSliderPageFourThree = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slideRef = useRef(null);
-  const slideCount = 2; // replace with the actual number of slides
-  const slideWidth = 1200; // match the width of each slide in your CSS
+  const slideCount = 2; 
+  const slideWidth = 1200; 
 
   const slidesData = [
     {
@@ -24,21 +24,20 @@ const CardSliderPageFourThree = () => {
     },
     // add more slides data as needed
   ];
+  // Navigate to the prev slide
+  // Uses setCurrentSlide to update the state based on the prev state
+  const moveLeft = () => 
+    // Using ternary: if current slide is the first one it shows the last slide
+    setCurrentSlide((prevSlide) =>
+      prevSlide<=0 ? slideCount-1 : prevSlide+1
+  );
 
-  const moveLeft = () => {
-    setCurrentSlide((prevSlide) => {
-      if (prevSlide <= 0) return slideCount - 1;
-      return prevSlide - 1;
-    });
-  };
-
-  const moveRight = () => {
-    setCurrentSlide((prevSlide) => {
-      if (prevSlide >= slideCount - 1) return 0;
-      return prevSlide + 1;
-    });
-  };
-
+  const moveRight = () => 
+    // Using ternary: if current slide is the first one it shows the first slide
+    setCurrentSlide((prevSlide) =>
+      prevSlide>=slideCount-1 ? 0 : prevSlide-1
+    );
+  
   useEffect(() => {
     if (slideRef.current) {
       slideRef.current.style.transform = `translateX(-${currentSlide * 100}vw)`;
