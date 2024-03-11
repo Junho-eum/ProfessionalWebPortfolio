@@ -8,23 +8,29 @@ import TextRevealProfile from "../components/PageSpecific/PageHome/TextRevealPro
 import HomePageNav from "../components/PageSpecific/PageHome/HomePageNav";
 
 function Page1() {
+  // state variable stores the current state of the text being "typed" by typewriter effect
   const [typedText, setTypedText] = useState("");
+  // text to be displayed
   const aText = [
     "Research & Projects:"
   ];
   const iSpeed = 140;
-
+  
+  // Ensure that typewriter is initiated once component is mounted
   useEffect(() => {
     let iIndex = 0;
     let iArrLength = aText[iIndex].length;
     let iTextPos = 0;
     let sContents = "";
-
+    
+    // updates typedText state variable by calling setTypedText
     function typeWriter() {
       sContents = " ";
+      // appends one character at a time from the aText array to simulate typing
       sContents += aText[iIndex].substring(0, iTextPos) + "_";
       setTypedText(sContents);
 
+      // uses setTimeout to delay each character's apperance based on iSpeed
       if (iTextPos++ === iArrLength) {
         iTextPos = 0;
         iIndex++;
