@@ -25,6 +25,12 @@ const cardsData = [
     title: "Clinic Location Finder",
     tags: ["HTML"],
   },
+  {
+    href: "https://junho-eum.github.io/dental_map.html",
+    imgSrc: "/EQWave.png",
+    title: "Pop to K-Pop EQ Matching",
+    tags: ["HTML"],
+  },
 ];
 
 const Card = ({ num, to, href, imgSrc, title, description, date, tags }) => {
