@@ -26,7 +26,7 @@ const cardsData = [
     tags: ["HTML"],
   },
   {
-    href: "https://junho-eum.github.io/dental_map.html",
+    href: "https://eqwebapp1.netlify.app/",
     imgSrc: "/EQWave.png",
     title: "Pop to K-Pop EQ Matching",
     tags: ["HTML"],
