@@ -12,7 +12,7 @@ function Page1() {
   const [typedText, setTypedText] = useState("");
   // text to be displayed
   const aText = [
-    "Research & Projects:"
+    "Research & Personal Projects:"
   ];
   const iSpeed = 140;
   
