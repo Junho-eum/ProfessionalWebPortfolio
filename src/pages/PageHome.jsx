@@ -7,48 +7,6 @@ import TextRevealProfile from "../components/PageSpecific/PageHome/TextEffect.js
 import HomePageNav from "../components/PageSpecific/PageHome/HomePageNav.jsx";
 
 function PageHome() {
-  // state variable stores the current state of the text being "typed" by typewriter effect
-  const [typedText, setTypedText] = useState("");
-  // text to be displayed
-  const aText = [
-    "Welcome to my portfolio website!",
-    "Research & Personal Projects:"
-  ];
-  const iSpeed = 140;
-  
-  // Ensure that typewriter is initiated once component is mounted
-  useEffect(() => {
-    let iIndex = 0;
-    let iArrLength = aText[iIndex].length;
-    let iTextPos = 0;
-    let sContents = "";
-    
-    // updates typedText state variable by calling setTypedText
-    function typeWriter() {
-      sContents = " ";
-      // appends one character at a time from the aText array to simulate typing
-      sContents += aText[iIndex].substring(0, iTextPos) + "_";
-      setTypedText(sContents);
-
-      // uses setTimeout to delay each character's apperance based on iSpeed
-      if (iTextPos++ === iArrLength) {
-        iTextPos = 0;
-        iIndex++;
-        if (iIndex !== aText.length) {
-          iArrLength = aText[iIndex].length;
-          setTimeout(() => {
-            setTypedText((prev) => prev + "<br/>");
-            typeWriter();
-          }, 500);
-        }
-      } else {
-        setTimeout(typeWriter, iSpeed);
-      }
-    }
-
-    typeWriter();
-  }, []);
-
   useEffect(() => {
     function Particle(x, y, z) {
       this.x = x || 0;
@@ -194,10 +152,6 @@ function PageHome() {
         </div>
         {/* <Navigation /> */}
         <h1 className="page1-maintext"></h1>
-        <h1
-          className="page1-maintext"
-          dangerouslySetInnerHTML={{ __html: typedText }}
-        ></h1>
         <div className="container-lg">
           <TextRevealProfile />
         </div>
