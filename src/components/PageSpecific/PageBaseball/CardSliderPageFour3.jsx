@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import '../../styles/CardSliderPageFour.css'; // assuming you moved your CSS into this file
-import '../../styles/PageEQ.scss'; // assuming you moved your CSS into this file
+import '../../styles/PageBaseball.css'; // assuming you moved your CSS into this file
 
 
 const CardSliderPageFourThree = () => {

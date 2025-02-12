@@ -1,146 +1,301 @@
-
-import React from "react";
+import React, { useState, useEffect, useRef } from 'react';
 import "../components/styles/PageBaseball.css";
-import HtmlComp from "../components/PageSpecific/PageBaseball/3DHTML";
-import HeatmapComp from "../components/PageSpecific/PageBaseball/Heatmap";
+import HtmlComp from '../components/PageSpecific/PageBaseball/3DHTML';
+import "../components/styles/listStyle.css";
+import CardSliderPageFourThree from "../components/PageSpecific/PageBaseball/CardSliderPageFour3";
+import CardSliderPageFourFour from "../components/PageSpecific/PageBaseball/CardSliderPageFour4";
+import HtmlComp_MLB from '../components/PageSpecific/PageBaseball/3DHTML_MLB';
+
 
 function PageBaseball() {
-  return (
-    <div className="page">
-      <h1>Baseball Analytic Across Cultures</h1>
-      <div className="container-fluid content-1">
-        <p className="Intro">
-        This study explores the unique style of the Korean Baseball Organization (KBO) through the lens of baseball statistics and the Pythagorean Expectation formula. The research delves into the estimation of a team's win rate, using varied parameters from pitching and batting datasets. By focusing on the deviations from predicted win-loss ratios, it uncovers insights into team performance and the key elements that define KBO's distinct style. The ultimate goal is to offer a refined understanding of KBO and its unique traits shaped by various influential factors.
+    const [currentId, setCurrentId] = useState(null);
+    const [currentTab, setCurrentTab] = useState(null);
+    const tabContainerHeight = 70;
+
+    const tabContainerRef = useRef(null);
+    const tabSliderRef = useRef(null);
+
+    // Event Handlers
+    // OnScroll function is called when the user scrolls the page and
+    // It invokes two other functions checkTabContainerPosition, findCurrentTab Selector
+    const onScroll = () => {
+        checkTabContainerPosition();
+        findCurrentTabSelector();
+    };
+
+    // Checks the position of the tab container on the page and
+    // adds or removes a CSS class based on the scroll position
+    const checkTabContainerPosition = () => {
+        const tabContainer = tabContainerRef.current;
+        let offset = tabContainer.getBoundingClientRect().top + tabContainer.getBoundingClientRect().height - tabContainerHeight;
+        if (window.scrollY > offset) {
+            tabContainer.classList.add('et-hero-tabs-container--top');
+        } else {
+            tabContainer.classList.remove('et-hero-tabs-container--top');
+        }
+    };
+
+    // Finds the current tab selector based on the scroll position
+    // and updates the state accordingly
+    const findCurrentTabSelector = () => {
+        let newCurrentId;
+        let newCurrentTab;
+        const tabs = document.querySelectorAll(".et-hero-tab");
+        tabs.forEach(tab => {
+            let id = tab.getAttribute("href");
+            let target = document.querySelector(id);
+            let offsetTop = target.offsetTop - tabContainerHeight;
+            let offsetBottom = target.offsetTop + target.offsetHeight - tabContainerHeight;
+            if (window.scrollY > offsetTop && window.scrollY < offsetBottom) {
+                newCurrentId = id;
+                newCurrentTab = tab;
+            }
+        });
+        if (currentId !== newCurrentId || currentId === null) {
+            setCurrentId(newCurrentId);
+            setCurrentTab(newCurrentTab);
+            setSliderCss();
+        }
+    };
+
+    // Adjust the style of a slider element based on the dimensions of a currentTab element
+    const setSliderCss = () => {
+        let width = 0;
+        let left = 0;
+        if (currentTab) {
+            width = getComputedStyle(currentTab).width;
+            left = currentTab.getBoundingClientRect().left;
+        }
+        const slider = tabSliderRef.current;
+        slider.style.width = width;
+        slider.style.left = `${left}px`;
+    };
+
+    // Use Effects
+    // event listener for scroll event on the window object
+    // when the component is mounted by colling window.addEventListener("scroll, onScroll")
+    useEffect(() => {
+        window.addEventListener("scroll", onScroll);
+        return () => {
+            window.removeEventListener("scroll", onScroll);
+        };
+    }, []);
+
+    // HTML components to variables
+    const HeaderSection = () => (
+      <section className="et-hero-tabs baseball-title">
+        {/*
+          This is a container element that contains all tab elements in the Hero Tabs component
+        */}
+        <div className="et-hero-tabs-container" ref={tabContainerRef}>
+          {/*
+            These are tab elements in the Hero Tabs component, which can be used to navigate to different sections of the page
+          */}
+          <a className="et-hero-tab" href="#tab-intro">
+            INTRO
+          </a>
+          <a className="et-hero-tab" href="#tab-preprocessing">
+            EDA
+          </a>
+          <a className="et-hero-tab" href="/China3.html">
+            3D Data
+          </a>
+          <a className="et-hero-tab" href="/Japan3.html">
+            2D Projection
+          </a>
+          <a
+            className="et-hero-tab"
+            href="/Weekly%20Average%20Sentiment%20Scores.html"
+          >
+            Weekly Sentiment
+          </a>
+          <a
+            className="et-hero-tab"
+            href="https://github.com/Junho-eum/Baseball_Analytics/blob/main/KBO_analytics_draft3.pdf"
+          >
+            README
+          </a>
+          {/*
+            This is the slider element that is used to indicate which tab is currently active
+            in the Hero Tabs component
+          */}
+          <span className="et-hero-tab-slider" ref={tabSliderRef}></span>
+        </div>
+      </section>
+    );
+
+    const InitiativeSection = () => (
+      <section className="et-slide section1" id="tab-intro">
+        <div className="header-container-1">
+          <h1 className="intro1">INITIATIVE</h1>
+          <p className="intro2">
+            Pythagorean Expectation in baseball, which proposes a proportional
+            win-loss ratio and their runs ratio, doesn't always hold true. Some
+            teams deviate from this theory due to factors like exceptional
+            performance or pure chance. This project explores such anomalies
+            through a comparative analysis across baseball leagues, aiming to
+            provide an understanding of team performance beyond the Pythagorean
+            Expectation. <br></br>
+            Below is a intuitive 3-d visualization of KBO and MLB baseball
+            leagues:
+          </p>
+          <br></br>
+
+          <div className="content-container-1 htmlcomp-container">
+            <HtmlComp />
+          </div>
+        </div>
+      </section>
+    );
+
+    const ScrollMessage = () => (
+      <div className="scroll-message">
+        Click here to scroll and see further content
+      </div>
+    );
+
+    const DataExplorationSection = () => (
+      <section className="et-slide-2">
+        <div className="header-container-2" id="tab-preprocessing">
+          <h1 className="intro1">Data Exploration&Preprocessing</h1>
+          <p className="intro2">
+            I compared team data from the Korean Baseball Organization
+            (1982-2021) with Major League Baseball (2002-2023), using data from
+            Baseball Reference. The focus was on 24 important variables to
+            understand team and player performance.
+          </p>
+          <h2 className="intro1">Dataset Overview</h2>
+          <div>
+            <p className="intro2">
+              <strong>Team and Player Information:</strong> Includes IDs, team
+              details, the year of data, and average player age.
+              <br></br>
+              <strong>Defensive Stats:</strong> Examines pitching metrics like
+              ERA and Innings Pitched, and team defense stats such as double
+              plays and caught stealing.<br></br>
+              <strong>Offensive Stats:</strong> Looks at batting performance,
+              including Hits, RBI, and Slugging Percentage, along with batter's
+              age.<br></br>
+              <strong>Analysis Process:</strong>
+              <br></br>
+              1. Cleaned the data by removing duplicates and filling in missing
+              values.<br></br>
+              2. Conducted a correlation analysis to see which variables most
+              affect win ratios, using R and Python for visualizations (heatmap
+              and bar chart).<br></br>
+            </p>
+          </div>
+        </div>
+
+        <div className="content-container-3">
+          <CardSliderPageFourThree />
+        </div>
+      </section>
+    );
+
+    const MLBHtmlSection = () => (
+      <div className="content-container-2 htmlcomp-container">
+        <HtmlComp_MLB />
+      </div>
+    );
+
+    const MethodologySection = () => (
+      <div>
+        <h2 className="intro1">
+          Principal Component Analysis (PCA) Methodology
+        </h2>
+        <p className="intro2">
+          <strong>Preliminary Preprocessing:</strong> I started by selecting
+          important variables and removing unnecessary ones from the dataset,
+          resulting in a more focused dataset named matrix P with dimensions
+          (323, 24).<br></br>
+          <br></br>
+          <strong>Data Standardization:</strong> For effective PCA, it's crucial
+          to standardize the data so each variable has a mean of 0 and a
+          standard deviation of 1. <br />I used the formula "P_std = (P -
+          P_mean) / P_sd", where "P" is the data, "P_mean" is the average, and
+          "P_sd" is the standard deviation.<br></br>
+          <br></br>
+          <strong>Computing the Covariance Matrix:</strong> Using the
+          standardized data, I created a covariance matrix, labeled S, to
+          understand the relationships between variables in terms of variance
+          and covariance.<br></br>
+          <br></br>
+          <strong>Eigen Decomposition:</strong>
+          <br></br>
+          1. I decomposed the covariance matrix to find its eigenvalues and
+          eigenvectors.<br></br>
+          2. The eigenvalues reveal the variance captured by each PCA component,
+          while eigenvectors show how to combine original variables to form
+          these components.<br></br>
         </p>
       </div>
-      <h2>Pythagorean Exp 3D-Modeling</h2>
-      <div className="container-fluid content-1 ">
-        <HtmlComp />
-        <div className="summary-1">
-          <p className="description">
-            Pythagorean Expectation in baseball, which proposes a
-            proportionaliPythagorean Exp 3D-Modelling win-loss ratio and their
-            runs ratio, doesn't always hold true. Some teams deviate from this
-            theory due to factors like exceptional performance or pure chance.
-            This paper explores such anomalies through a comparative analysis
-            across baseball leagues, aiming to provide a nuanced understanding
-            of team performance beyond the Pythagorean Expectation.
+    );
+    
+    const InterpretationSection = () => (
+      <div>
+        <h1 className="intro1">Interpretation of PCA Components</h1>
+        <h2 className="intro1">Heatmap Representation of PC loadings</h2>
+        <p className="intro2">
+          The loadings show how each variable in the dataset contributes to each
+          principal component.<br></br>
+          By examining these loadings, we can understand what each principal
+          component represents in terms of the original variables.<br></br>
+          Below is a heatmap of the loadings for the represetation of the first
+          8 principal components:
+        </p>
+      </div>
+    );
+
+    const DiscussionSection = () => (
+      <section className="et-slide-4" id="tab-interaction">
+        <div className="header-container-5">
+          <h1 className="intro1">Decoding Team Dynamics</h1>
+          <p className="intro2">
+            I focused on the principal components that are most crucial in the
+            dataset.<br></br> By analyzing the loadings and applying thresholds
+            based on means and standard deviations, I identified the key
+            elements and evaluated the strength of the variable’s impact on
+            them.<br></br>
+            Here, I present a brief description and title for each of these
+            significant components:
           </p>
+          <h2 className="intro1">KBO Dataset Key Component Extraction</h2>
+          <p className="intro2"></p>
+          <div className="content-container-5">
+            <div className="div-footer">{/* <Footer /> */}</div>
+          </div>
         </div>
-      </div>
+      </section>
+    );
 
-      <div className="container-fluid content">
-        <HeatmapComp />
-
-        <div className="summary">
-          <h1>Preprocessing & parameter selection</h1>
-          <p className="description">
-            I conducted a correlation analysis to identify key factors impacting
-            the win-loss percentage in baseball, using heatmaps for
-            visualization. Recognizing the limitations of correlation-based
-            feature selection, like the potential for multicollinearity and the
-            risk of missing non-linear relationships, I categorized our analysis
-            into pitcher and batter features. This provided deeper insights into
-            the factors influencing the game outcomes
-          </p>
-        </div>
+    return (
+      <div>
+        <HeaderSection />
+        <main className="et-main">
+          <InitiativeSection />
+          <ScrollMessage />
+          <div className="left-side">
+            <MLBHtmlSection />
+            <DataExplorationSection />
+          </div>
+          <div className="content-container-3">
+            <section className="et-slide-3 section3" id="tab-PCA">
+              <div className="header-container">
+                <MethodologySection />
+                <InterpretationSection />
+                <div className="content-container-4">
+                  <CardSliderPageFourFour />
+                </div>
+                <DiscussionSection />
+                <div className="div-footer">{/* <Footer /> */}</div>
+              </div>
+            </section>
+          </div>
+        </main>
       </div>
-
-      <div className="container-fluid content-3">
-        <div className="figure2">
-          <PCAComp />
-          <GmmCluster />
-        </div>
-        <div className="summary-3">
-          <h1>Principal component analysis with Gaussian Mixture Model</h1>
-          <p className="description">
-            The analytical process used to interpret the batter data involves
-            two primary steps - Principal Component Analysis (PCA) and Gaussian
-            Mixture Models (GMM) clustering. The PCA helped to reduce the
-            dimensionality of the batter data, which comprises several features
-            like hits, doubles, triples, home runs scored, etc. The goal was to
-            convert these variables into a smaller set of new features (the
-            Principal Components) while retaining most of the variability
-            present in the original data. The interpretation of these principal
-            components was conducted by examining the loadings of the original
-            features on each component, i.e., the contribution of each feature
-            to each component. The features with the highest absolute loading on
-            a component are considered to be the ones that the component
-            represents. Following PCA, we applied GMM to classify or group the
-            data points in the PCA transformed space into different clusters,
-            each represented by a Gaussian distribution. We used Bayesian
-            Information Criterion (BIC) and Akaike Information Criterion (AIC)
-            to determine the best number of clusters for GMM. The final
-            interpretation of the PCA components and GMM clustering resulted in
-            four significant components:
-          </p>
-
-          <ul>
-            <li>
-              <b>Offensive Power</b> - This component represents the inverse of
-              a team's overall offensive strength, with features such as 'RBI',
-              'total_runs_scored', 'total_bases', 'hits_y', 'plate_appearances',
-              etc. Teams with strong offensive performance may have a lower
-              score in this component.
-            </li>
-            <li>
-              <b>Offensive Efficiency</b> - This component captures the
-              efficiency of a team's offensive output. Teams that play fewer
-              games, have fewer strikeouts, and lower at-bats, or those with
-              higher batting average, OPS, and SLG values are considered more
-              efficient.
-            </li>
-            <li>
-              <b>Hit Type Tendency</b> - This component captures a team's
-              inclination towards specific types of hits. Teams with more
-              triples and sacrifice flies and fewer home runs may score higher
-              in this component, reflecting a specific style of play.
-            </li>
-            <li>
-              <b>Strategic Baserunning</b> - This component indicates a team's
-              strategic approach to advancing runners and gaining bases. Teams
-              that utilize sacrifice hits strategy score higher in this
-              component. Conversely, teams with fewer strikeouts and GDP have a
-              higher component score.
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div className="container-fluid content">
-        <InteractionComp />
-        <div className="summary">
-          <h2>
-            Optimization and Interaction Analysis of Batting and Pitching
-            Variables Using XGBoost Models
-          </h2>
-          <p className="description">
-            Our research involves the development of two separate XGBoost models
-            for pitcher and batter data in the KBO league, targeting the
-            prediction of total runs scored. After executing a Grid Search
-            methodology, we achieved high model accuracy scores, 0.9837 and
-            0.9796, for batter and pitcher data respectively. In-depth analysis
-            of these models revealed significant interactions between certain
-            features. In batter data, the RBI and hits variables were
-            consolidated due to their strong interaction, while in the pitcher
-            data, key variable pairs like hits allowed and ERA, ERA and batters
-            faced, and homeruns allowed and ERA were combined. Interestingly, we
-            noted that high homerun counts correlated with a higher ERA,
-            particularly when ERA was greater than 4.5. This highlights a trend
-            where teams with higher scores tend to allow more homeruns. These
-            findings and enhanced understanding of variable interactions will
-            guide our future model refinements for better predictive performance
-            and richer understanding of KBO league dynamics.
-          </p>
-        </div>
-      </div>
-      <div className="container text-center">
-        <div className="row row-cols-2">
-          <div className="col">Column</div>
-        </div>
-      </div>
-    </div>
-  );
+    );
 }
+
 
 export default PageBaseball;

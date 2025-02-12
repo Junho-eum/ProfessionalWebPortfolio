@@ -1,3 +1,5 @@
+@import "../Variables/variables.scss";
+
 .page {
   display: flex;
   flex-direction: column;
@@ -159,4 +161,303 @@ p.figure-description {
     width: 100%; /* Flexible height */
   }
 }
+}
+
+a {
+  text-decoration: none;
+}
+
+.et-hero-tabs,
+.et-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 38vh;
+  position: relative;
+  background: white; 
+  text-align: left;
+  padding: 0;
+}
+.et-hero-tab{
+    border-right: 2px solid #000000; /* Black border, 2px thick */
+  /* other styles for your tabs */
+}
+.et-hero-tabs{
+  border: 2px solid #000000; /* Black border, 2px thick */
+}
+
+.et-hero-tabs.baseball-title,
+.et-slide.baseball-title {
+  background-color: dodgerblue;
+  color: white;
+  background-image: url('/banner1.png'); /* Updated path */
+  background-size: cover; /* This ensures that your image covers the entire div */
+  background-position: center; /* This will center your image in the div */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+.slide-description p {
+  white-space: pre-wrap;
+}
+
+.et-slide-2,
+.et-slide-3,
+.et-slide-4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  background: white;
+  text-align: center;
+  
+  height: 0vh;
+  padding-left: 1rem;
+}
+.et-slide-2 {
+  /* Set a minimum height or adjust as per the content */
+  min-height: 100vh; /* Example: setting a minimum height */
+  background-color: red; /* Temporary for debugging */
+}
+.et-slide-3 {
+  height: 100vh;
+  margin-top: 10vh;
+  margin-bottom: 10rem;
+}
+.et-slide-4 {
+  height: 5vh;
+  margin-top: -100vh;
+  margin-bottom: 10vh;
+  text-align: left;
+}
+
+.header-container,
+.header-container-1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: left;
+  flex-direction: row;
+  background-color: white;
+  font-family: 'Russo One', sans-serif;
+}
+
+.header-container-1 {
+  /* Example: Setting top margin to 10vh */
+  margin-top: 10vh;
+}
+
+.header-container-5 {
+  margin-top: -50vh;
+  background-color: white;
+}
+
+.header-container-2 {
+  position: relative;
+  width: 100%;
+  text-align: left;
+  /* Adjusted margin-top */
+  margin-top: -100vh; /* Example: Adjust this value as needed */
+}
+
+.et-hero-tabs h1,
+.et-hero-tabs h2,
+.et-slide h1 {
+  font-size: 2rem;
+  margin: 10;
+  letter-spacing: 0.6rem;
+  font-family: 'Russo One', sans-serif;
+}
+
+.et-hero-tab-title, .et-slide-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 50vh;
+  position: relative;
+  background: white;
+  text-align: left;
+  padding: 0;
+}
+
+.et-hero-tab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  color: #000;
+  letter-spacing: 0.1rem;
+  transition: all 0.5s ease;
+  font-size: 0.8rem;
+  font-family: 'Russo One', sans-serif;
+}
+
+.et-hero-tab:hover {
+  color: white;
+  background: rgba(102, 177, 241, 0.8);
+  transition: all 0.5s ease;
+}
+
+.et-hero-tabs-container {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  z-index: 10;
+  margin-left: 0;
+}
+
+.et-hero-tabs-container--top {
+  position: fixed;
+  top: 0;
+}
+
+.et-hero-tab-slider {
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 6px;
+  background: #66B1F1;
+  transition: left 0.3s ease;
+}
+
+.header-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: left;
+  flex-direction: row;
+  margin-top: 5vh;
+  background-color: white;
+}
+
+.image-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.image-container img {
+  flex: 1 0 auto;
+  margin: 10px;
+  max-width: calc(33% - 20px);
+  height: auto;
+}
+
+.content-container-1,
+.content-container-2,
+.content-container-3,
+.content-container-4,
+.content-container-5 {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  overflow: visible;
+  flex-direction: column;
+}
+
+.content-container-1 {
+  align-items: flex-start;
+  height: 75vh;
+  flex-direction: row;
+}
+
+.content-container-2 {
+  align-items: flex-start;
+  height: 75vh;
+  flex-direction: row;
+  margin-bottom: 150vh; /* Provide space below the container */
+  padding: 10px;
+}
+
+.content-container-3 {
+  align-items: left;
+  height: auto;
+  margin-bottom: 20vh;
+  background-color: white;
+}
+
+.content-container-4 {
+  align-items: center;
+  height: auto;
+  margin-top: vh;
+  margin-bottom: 150vh;
+}
+
+.content-container-10 {
+  margin-top: 5vh;
+}
+
+.htmlcomp-container {
+  margin-bottom: -17vh; /* Adjust based on your design needs */
+}
+
+.section1 {
+  margin-bottom: 100vh;
+}
+.section3 {
+  margin-bottom: 70vh;
+}
+
+
+@media (min-width: 500px) {
+  .et-hero-tabs h1,
+  .et-slide h1,
+  .et-slide-2 h1 {
+    font-size: 3rem;
+    letter-spacing: 0.01rem;
+    padding-top: 20px;
+    font-family: 'Russo One', sans-serif;
+  }
+}
+
+@media (min-width: 800px) {
+  .header-container {
+    flex-direction: row;
+  }
+}
+
+h1.intro1 {
+  text-align: center; /* Centers text inside the element */
+  font-size: 2.5rem;
+}
+
+h2.intro1 {
+  padding-left: 30px;
+  font-family: 'Russo One', sans-serif;
+  font-size: 2.1rem;
+}
+
+p.intro2 {
+  margin-bottom: -10px;
+  line-height: 1.6;
+  padding: 30px;
+  font-family: 'Russo One', sans-serif;
+  font-size: 1.5rem;
+}
+
+.scroll-message {
+  background-color: black; /* Black background */
+  color: white; /* White text */
+  text-align: center;
+  margin-top: -26vh; /* Adjust as necessary for spacing */
+  margin-bottom: 0vh; /* Adjust as necessary */
+  font-family: Arial, sans-serif; /* Use your preferred font */
+  font-size: 1rem; /* Adjust the font size as needed */
+  cursor: pointer; /* Change cursor on hover to indicate clickability */
+  padding: 10px; /* Add some padding for better visual appearance */
+}
+
+.methodology-container {
+  width: 100%; /* Full width of the container */
+  padding: 20px; /* Add some padding for internal spacing */
+  margin-top: 20vh; /* Space from the top or previous element */
+  text-align: left; /* Align text to the left */
+  background-color: white; /* Background color of the container */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: adds a subtle shadow for depth */
 }
