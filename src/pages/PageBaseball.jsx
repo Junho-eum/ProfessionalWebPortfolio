@@ -1,9 +1,10 @@
+
 import React from "react";
-import "../components/styles/Page2.css";
+import "../components/styles/PageBaseball.css";
 import HtmlComp from "../components/PageSpecific/PageBaseball/3DHTML";
 import HeatmapComp from "../components/PageSpecific/PageBaseball/Heatmap";
 
-function Page2() {
+function PageBaseball() {
   return (
     <div className="page">
       <h1>Baseball Analytic Across Cultures</h1>
@@ -142,4 +143,4 @@ function Page2() {
   );
 }
 
-export default Page2;
+export default PageBaseball;

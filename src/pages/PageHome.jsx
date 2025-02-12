@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from "react";
 import "../App.css";
-import TextReveal from "../components/PageSpecific/PageHome/TextReveal"; // Import the new component
-import "../components/styles/Typewriter.css"; // include this if your css is in Typewriter.css
-import Cards from "../components/PageSpecific/PageHome/Cards";
+import "../components/styles/TextEffect.css"; // include this if your css is in Typewriter.css
+import Cards from "../components/PageSpecific/PageHome/Cards.jsx";
 import "../components/styles/Cards.scss";
-import TextRevealProfile from "../components/PageSpecific/PageHome/TextRevealProfile.jsx";
-import HomePageNav from "../components/PageSpecific/PageHome/HomePageNav";
+import TextRevealProfile from "../components/PageSpecific/PageHome/TextEffect.jsx";
+import HomePageNav from "../components/PageSpecific/PageHome/HomePageNav.jsx";
 
-function Page1() {
+function PageHome() {
   // state variable stores the current state of the text being "typed" by typewriter effect
   const [typedText, setTypedText] = useState("");
   // text to be displayed
   const aText = [
+    "Welcome to my portfolio website!",
     "Research & Personal Projects:"
   ];
   const iSpeed = 140;
@@ -36,7 +36,10 @@ function Page1() {
         iIndex++;
         if (iIndex !== aText.length) {
           iArrLength = aText[iIndex].length;
-          setTimeout(typeWriter, 500);
+          setTimeout(() => {
+            setTypedText((prev) => prev + "<br/>");
+            typeWriter();
+          }, 500);
         }
       } else {
         setTimeout(typeWriter, iSpeed);
@@ -195,7 +198,6 @@ function Page1() {
           className="page1-maintext"
           dangerouslySetInnerHTML={{ __html: typedText }}
         ></h1>
-        <TextReveal /> {/* Use the new component */}
         <div className="container-lg">
           <TextRevealProfile />
         </div>
@@ -204,4 +206,4 @@ function Page1() {
   );
 }
 
-export default Page1;
+export default PageHome;

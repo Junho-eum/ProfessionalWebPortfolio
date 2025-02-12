@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import '../components/styles/Page3.css';
 
-function PageThree() {
+function PageHeap() {
     const title = "Document Classifier Algorithm"
     const subtitle = "implemented with heap data structure"
     const introDescription = "This paper presents an approach to cluster documents using term frequency-inverse document frequency (TF-IDF) to identify the most important terms in each document and then using cosine similarity implemented by heap data structures to sort the documents based on their cosine similarity to the root document."
@@ -110,4 +110,4 @@ function PageThree() {
 }
 
 
-export default PageThree;
+export default PageHeap;

@@ -1,9 +1,8 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Page1 from "./pages/HomePage";
-import Page2 from "./pages/PageTwo";
-import Page3 from "./pages/PageThree";
-import Page4 from "./pages/PageFour";
-import ArticlePage from "./pages/ArticlePage"; // Import ArticlePage
+import PageHome from "./pages/PageHome";
+import PageBaseball from "./pages/PageBaseball";
+import PageHeap from "./pages/PageHeap";
+import PageEQ from "./pages/PageEQ";
 import Skillsets from "./components/PageSpecific/PageSkillSet/SkillSet";
 import "./App.css";
 
@@ -13,11 +12,10 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
-          <Route path="/" element={<Page1 />} />
-          <Route path="page2" element={<Page4 />} />
-          <Route path="page3" element={<Page2 />} />
-          <Route path="page4" element={<Page4 />} />
-          <Route path="article" element={<ArticlePage />} /> {/* New route */}
+          <Route path="/" element={<PageHome />} />
+          <Route path="page2" element={<PageBaseball />} />
+          <Route path="page3" element={<PageHeap />} />
+          <Route path="page4" element={<PageEQ />} />
           <Route path="skillsets" element={<Skillsets />} /> {/* New route */}
         </Routes>
       </div>

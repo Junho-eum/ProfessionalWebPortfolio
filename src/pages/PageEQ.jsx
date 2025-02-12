@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-import '../components/styles/Page4.scss';
-import "../components/styles/Page2.css";
+import '../components/styles/PageEQ.scss';
+import "../components/styles/PageBaseball.css";
 import HtmlComp from '../components/PageSpecific/PageBaseball/3DHTML';
 import "../components/styles/listStyle.css";
 import CardSliderPageFourThree from "../components/PageSpecific/PageBaseball/CardSliderPageFour3";
@@ -8,7 +8,7 @@ import CardSliderPageFourFour from "../components/PageSpecific/PageBaseball/Card
 import HtmlComp_MLB from '../components/PageSpecific/PageBaseball/3DHTML_MLB';
 
 
-function PageFour() {
+function PageEQ() {
     const [currentId, setCurrentId] = useState(null);
     const [currentTab, setCurrentTab] = useState(null);
     const tabContainerHeight = 70;
@@ -299,4 +299,4 @@ function PageFour() {
 }
 
 
-export default PageFour;
+export default PageEQ;

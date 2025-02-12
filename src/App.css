@@ -83,7 +83,7 @@
   z-index: 3; /* This ensures the navigation stays on top of other elements */
 }
 .page1-maintext {
-  font-family: 'Waiting for the Sunrise', cursive;
+  font-family: "Russo One", sans-serif;
   position: absolute;
   top: 0;
   z-index: 1; /* This ensures the navigation stays on top of other elements */
