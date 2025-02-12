@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css?family=Heebo:400,700|Open+Sans:400,700");
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise" );
 /* Typewriter.css */
 .page1-typewriter-line-1 {
   position: absolute;
@@ -177,4 +180,15 @@
   100% {
     transform: scaleX(0);
   }
+}
+
+.textEffect-typeWriter {
+  font-family: "Russo One", sans-serif;
+  position: absolute;
+  top: 0;
+  z-index: 1; /* This ensures the navigation stays on top of other elements */
+  color: white; /* Set the font color to white */
+  font-size: 3.3vw;
+  margin-left: 15px;
+  top:54.2vh;
 }

@@ -5,7 +5,7 @@ import "../../styles/TextEffect.css";
 function TextRevealProfile() {
   return (
     <>
-      <h1 className="page1-maintext">
+      <h1 className="textEffect-typeWriter">
         JUNHO EUM<br></br>
       </h1>
 
