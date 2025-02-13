@@ -7,9 +7,9 @@ function TextEffect() {
   // text to be displayed
   const aText = [
     "Welcome to my portfolio website!",
-    "Research & Personal Projects:",
+    
   ];
-  const iSpeed = 140;
+  const iSpeed = 90;
 
   // Ensure that typewriter is initiated once component is mounted
   useEffect(() => {
@@ -42,18 +42,26 @@ function TextEffect() {
   return (
     <>
       <h1
-        className="textEffect-typeWriter"
+        className="textEffect-typeWriter-1"
         dangerouslySetInnerHTML={{ __html: typedText }}
       ></h1>
 
-      <h2>Welcome to my portfolio website!</h2>
       <h3 className="textReveal-reveal-profile">
+        I am a Ph.D. student in Computer Science at the
+        George Washington University.<br></br>
         My passion lies in enhancing the usability of cybersecurity solutions
         for end users.<br></br> My research focuses on human-centered digital
         identities and trustworthy AI.<br></br> I specialize in conducting
-        task-based user studies, building prototype softwares to gain a
+        task-based user studies,building prototype softwares to gain <br></br>a
         realistic understanding of end user perception.
       </h3>
+
+      <h1 className="textReveal-reveal-profile-2">
+        Research & Personal Projects:
+      </h1>
+      <h1 className="textReveal-reveal-profile-3">
+        Junho Eum
+      </h1>
     </>
   );
 }

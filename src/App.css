@@ -82,9 +82,8 @@
 
 .profile-container {
   position: absolute; /* Position the container absolutely */
-  
   top: 10%;
-  left: 10%;
+  left: 13%;
   transform: translateX(-50%); /* Center the container horizontally */
   display: flex;
   justify-content: center;
@@ -93,8 +92,10 @@
 }
 
 .profile-pic {
-  width: 275px; /* Adjust as needed */
-  height: 300px; /* Adjust as needed */
+  width: 20vw; /* Adjust width relative to viewport width */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 305px; /* Set a maximum width */
+  max-height: 375x; /* Set a maximum height */
   border-radius: 50%;
   border: 5px solid #fff; /* Add a white border */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
