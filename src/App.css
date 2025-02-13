@@ -9,34 +9,6 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
 .card {
   padding: 2em;
 }
@@ -106,4 +78,27 @@
   transform: translate(-50%, -50%);
   text-align: center;
   z-index: 2; /* ensure it's on top of the canvas */
+}
+
+.profile-container {
+  position: absolute; /* Position the container absolutely */
+  
+  top: 10%;
+  left: 10%;
+  transform: translateX(-50%); /* Center the container horizontally */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99; /* Ensure it's on top of the canvas */
+}
+
+.profile-pic {
+  width: 275px; /* Adjust as needed */
+  height: 300px; /* Adjust as needed */
+  border-radius: 50%;
+  border: 5px solid #fff; /* Add a white border */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+.canvas-container {
+  z-index: 1; /* Ensure the canvas is below the profile container */
 }

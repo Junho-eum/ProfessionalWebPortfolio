@@ -1,7 +1,7 @@
 import "../../styles/TextEffect.css";
 import React, { useEffect, useState } from "react";
 
-function TextRevealProfile() {
+function TextEffect() {
   // state variable stores the current state of the text being "typed" by typewriter effect
   const [typedText, setTypedText] = useState("");
   // text to be displayed
@@ -58,4 +58,4 @@ function TextRevealProfile() {
   );
 }
 
-export default TextRevealProfile;
+export default TextEffect;

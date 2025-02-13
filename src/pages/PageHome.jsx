@@ -3,8 +3,9 @@ import "../App.css";
 import "../components/styles/TextEffect.css"; // include this if your css is in Typewriter.css
 import Cards from "../components/PageSpecific/PageHome/Cards.jsx";
 import "../components/styles/Cards.scss";
-import TextRevealProfile from "../components/PageSpecific/PageHome/TextEffect.jsx";
+import TextEffect from "../components/PageSpecific/PageHome/TextEffect.jsx";
 import HomePageNav from "../components/PageSpecific/PageHome/HomePageNav.jsx";
+
 
 function PageHome() {
   useEffect(() => {
@@ -146,14 +147,17 @@ function PageHome() {
     <>
       <div className="page page1">
         <HomePageNav />
+
         <div className="canvas-container">
           <canvas id="c"></canvas>
           <Cards />
         </div>
-        {/* <Navigation /> */}
+        <div className="profile-container">
+          <img src="/profile.jpg" alt="Profile" className="profile-pic" />
+        </div>
         <h1 className="page1-maintext"></h1>
         <div className="container-lg">
-          <TextRevealProfile />
+          <TextEffect />
         </div>
       </div>
     </>
